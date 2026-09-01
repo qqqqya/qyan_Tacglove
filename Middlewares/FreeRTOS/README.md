@@ -12,8 +12,7 @@ M0_ing/
 │   ├── LED/                      SK6805物理驱动和板级逻辑映射
 │   └── BEEP/                     蜂鸣器GPIO驱动和板级动作
 ├── Middlewares/
-│   ├── FreeRTOS/                 本机型FreeRTOSConfig和故障Hook
-│   └── Log/                      可裁剪日志接口
+│   └── FreeRTOS/                 本机型FreeRTOSConfig和故障Hook
 ├── User_tasks/
 │   ├── led_task.c/.h             LED自检任务
 │   ├── beep_task.c/.h            蜂鸣器自检任务
@@ -116,13 +115,12 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 示例：
 
 ```c
-bool result = key_task_create();
-if (!result)
+task_status_t result = key_task_create();
+if (TASK_OK != result)
 {
-    APP_LOG_ERROR("key task registration failed");
-    return false;
+    /* 日志预留：记录按键任务注册失败及result。 */
+    return result;
 }
-APP_LOG_INFO("key task registration passed");
 ```
 
 ### 3.3 使用CubeMX增加UART、I2C、TIM等芯片外设
@@ -302,36 +300,23 @@ beep_task.c
 
 如果三次短鸣不断重新出现，不是任务在循环，而是MCU可能在不断复位，应同时观察LED灯效是否也从头开始，并测量NRST、3.3 V和PA1。如果PA1始终稳定高电平但仍持续轻响，再检查S8550管脚、焊接、漏电和蜂鸣器器件方向。
 
-## 9. 代码检查和日志规范
+## 9. 状态检查和日志预留
 
-代码不应把多个关键操作压缩在一条 `return a() && b() && c()` 中。对可能失败的步骤，应保存返回值、逐步判断、记录步骤和错误码，再决定继续、重试或退出。
+代码不把多个关键操作压缩在一条 `return a() && b() && c()` 中。对可能失败的步骤，应保存状态、逐步判断，并把原始错误向上传递，以便确定失败层级和失败原因。
 
 推荐结构：
 
 ```c
-status = bsp_example_handler_start();
-if (status != BSP_EXAMPLE_STATUS_OK)
+led_handler_status_t status = bsp_led_handler_commit();
+if (HANDLER_OK != status)
 {
-    APP_LOG_ERROR("example start failed: status=%d", (int)status);
-    return false;
+    /* 日志预留：记录提交失败及status。 */
+    return status;
 }
-APP_LOG_INFO("example start passed");
 ```
 
-当前LED、BEEP和任务集中注册代码已经按此方式编写。
+不能只判断 `HANDLER_ERROR == status`，因为这样会漏掉Timeout、Resource、Parameter和NoMemory等错误。统一采用 `SUCCESS_STATUS != status` 检查所有非成功状态。
 
-但本工程目前没有启用UART，`syscalls.c` 中的 `_write()` 最终需要 `__io_putchar()`，而当前没有实际实现。直接打开 `printf` 可能跳入空弱符号并HardFault。因此CMake当前设置：
+当前阶段已经删除 `Middlewares/Log`、`APP_LOG_INFO`、`APP_LOG_ERROR` 和对应CMake配置。代码只在关键错误分支保留“日志预留”注释，后续移植EasyLogger时再接入，不提前引入无输出通道的打印代码。
 
-```cmake
-APP_LOG_ENABLE=0
-```
-
-日志调用会在预处理阶段完全移除，不占用运行时资源。若需要真正看到串口打印：
-
-1. 在CubeMX中配置原理图UART接口对应的PA2/PA3及正确USART；
-2. 生成并确认 `usart.c` 和HAL UART Driver加入CMake；
-3. 实现 `int __io_putchar(int ch)`，将字符发送到UART；
-4. 把 `APP_LOG_ENABLE=0` 改为1；
-5. 重新检查Flash、任务栈High Water Mark和阻塞时间。
-
-STM32F042只有6 KB RAM，标准 `printf` 尤其是浮点格式化会显著增加Flash和栈消耗。业务运行阶段建议使用轻量二进制日志或关闭详细日志，不要直接照搬大容量M4工程的日志配置。
+完整编码规则见 `docs/C_CODE_STYLE_GUIDE.md`。

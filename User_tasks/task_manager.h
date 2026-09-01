@@ -5,7 +5,7 @@
 #ifndef TASK_MANAGER_H
 #define TASK_MANAGER_H
 
-#include <stdbool.h>
+#include "task_status.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -13,11 +13,12 @@ extern "C" {
 
 /**
  * @brief 创建固件需要的全部应用任务。
- * @retval true 所有任务均创建成功。
- * @retval false 至少一个任务创建失败。
+ * @retval TASK_OK 所有任务均创建成功。
+ * @retval TASK_ERROR_NO_MEMORY 任一任务因FreeRTOS heap不足创建失败。
+ * @retval TASK_ERROR 其他任务创建错误。
  * @note 本函数相当于CubeMX工程中的MX_FREERTOS_Init()。
  */
-bool task_manager_init(void);
+task_status_t task_manager_init(void);
 
 #ifdef __cplusplus
 }

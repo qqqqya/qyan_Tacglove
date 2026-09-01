@@ -8,7 +8,6 @@
 #ifndef BSP_LED_HANDLER_H
 #define BSP_LED_HANDLER_H
 
-#include <stdbool.h>
 #include <stdint.h>
 
 #include "bsp_led_driver.h"
@@ -30,51 +29,71 @@ typedef enum
     BSP_LED_CAMERA_5
 } bsp_led_camera_id_t;
 
+/** @brief LED Handler层函数返回状态。 */
+typedef enum
+{
+    HANDLER_OK             = 0,    /**< Operation completed successfully. */
+    HANDLER_ERROR          = 1,    /**< General runtime error. */
+    HANDLER_ERRORTIMEOUT   = 2,    /**< Operation timed out. */
+    HANDLER_ERRORRESOURCE  = 3,    /**< Required resource is unavailable. */
+    HANDLER_ERRORPARAMETER = 4,    /**< Invalid parameter. */
+    HANDLER_ERRORNOMEMORY  = 5,    /**< Memory allocation failed. */
+    HANDLER_ERRORISR       = 6,    /**< Operation is not allowed in ISR context. */
+    HANDLER_RESERVED       = 0xFF  /**< Reserved status. */
+} led_handler_status_t;
+
 /**
  * @brief 初始化 LED driver，并向灯链发送一帧全灭数据。
- * @retval true 初始化及首帧发送成功。
- * @retval false 底层发送失败，通常表示系统时钟不是 48 MHz。
+ * @retval HANDLER_OK 初始化及首帧发送成功。
+ * @retval HANDLER_ERRORRESOURCE 系统时钟或底层资源不满足要求。
+ * @retval HANDLER_ERROR 其他底层错误。
  */
-bool bsp_led_handler_init(void);
+led_handler_status_t bsp_led_handler_init(void);
 
 /**
  * @brief 设置一路普通相机指示灯的缓存颜色。
  * @param camera 相机逻辑编号。
  * @param color 目标颜色。
- * @retval true 设置成功。
- * @retval false 相机编号非法。
+ * @retval HANDLER_OK 设置成功。
+ * @retval HANDLER_ERRORPARAMETER 相机编号非法。
  * @note 本函数不立即刷新灯珠，需调用 bsp_led_handler_commit()。
  */
-bool bsp_led_handler_set_camera(bsp_led_camera_id_t camera, bsp_led_color_t color);
+led_handler_status_t bsp_led_handler_set_camera(bsp_led_camera_id_t camera,
+                                                 bsp_led_color_t color);
 
 /**
  * @brief 将五路普通相机指示灯设置为相同的缓存颜色。
  * @param color 目标颜色。
- * @retval true 五路缓存均设置成功。
+ * @retval HANDLER_OK 五路缓存均设置成功。
+ * @retval HANDLER_ERRORPARAMETER 参数错误。
+ * @retval HANDLER_ERROR 其他底层错误。
  * @note 本函数不立即刷新灯珠。
  */
-bool bsp_led_handler_set_all_cameras(bsp_led_color_t color);
+led_handler_status_t bsp_led_handler_set_all_cameras(bsp_led_color_t color);
 
 /** @brief 设置鱼眼相机灯缓存；调用 commit 后生效。 */
-bool bsp_led_handler_set_fisheye(bsp_led_color_t color);
+led_handler_status_t bsp_led_handler_set_fisheye(bsp_led_color_t color);
 
 /** @brief 设置系统状态灯缓存；调用 commit 后生效。 */
-bool bsp_led_handler_set_system(bsp_led_color_t color);
+led_handler_status_t bsp_led_handler_set_system(bsp_led_color_t color);
 
 /**
  * @brief 将 handler 层设置的全部颜色提交到物理灯链。
- * @retval true 发送成功。
- * @retval false 底层发送失败。
+ * @retval HANDLER_OK 发送成功。
+ * @retval HANDLER_ERRORRESOURCE 系统时钟或底层资源不满足要求。
+ * @retval HANDLER_ERROR 其他底层错误。
  */
-bool bsp_led_handler_commit(void);
+led_handler_status_t bsp_led_handler_commit(void);
 
 /**
  * @brief 显示当前固件定义的启动完成状态。
  * @details LED1~LED5 低亮绿色常亮，LED6 鱼眼灯与 LED7 系统灯熄灭。
- * @retval true 状态设置并发送成功。
- * @retval false 参数设置或底层发送失败。
+ * @retval HANDLER_OK 状态设置并发送成功。
+ * @retval HANDLER_ERRORPARAMETER 参数设置失败。
+ * @retval HANDLER_ERRORRESOURCE 底层资源不满足要求。
+ * @retval HANDLER_ERROR 其他底层错误。
  */
-bool bsp_led_handler_show_startup_state(void);
+led_handler_status_t bsp_led_handler_show_startup_state(void);
 
 #ifdef __cplusplus
 }

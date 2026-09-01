@@ -5,7 +5,7 @@
 #ifndef LED_TASK_H
 #define LED_TASK_H
 
-#include <stdbool.h>
+#include "task_status.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -13,10 +13,11 @@ extern "C" {
 
 /**
  * @brief 创建SK6805板级自检任务。
- * @retval true FreeRTOS任务创建成功。
- * @retval false FreeRTOS heap不足或任务创建失败。
+ * @retval TASK_OK FreeRTOS任务创建成功。
+ * @retval TASK_ERROR_NO_MEMORY FreeRTOS heap不足。
+ * @retval TASK_ERROR 其他任务创建错误。
  */
-bool led_task_create(void);
+task_status_t led_task_create(void);
 
 #ifdef __cplusplus
 }

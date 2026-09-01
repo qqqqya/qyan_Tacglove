@@ -15,24 +15,30 @@ extern "C" {
 /** @brief 蜂鸣器Driver层返回状态。 */
 typedef enum
 {
-    BSP_BEEP_STATUS_OK = 0,       /**< 操作成功。 */
-    BSP_BEEP_STATUS_NOT_INITIALIZED /**< 尚未初始化Driver。 */
-} bsp_beep_status_t;
+    BEEP_DRIVER_OK              = 0,    /**< Operation completed successfully. */
+    BEEP_DRIVER_ERROR           = 1,    /**< General runtime error. */
+    BEEP_DRIVER_ERROR_TIMEOUT   = 2,    /**< Operation timed out. */
+    BEEP_DRIVER_ERROR_RESOURCE  = 3,    /**< Required resource is unavailable. */
+    BEEP_DRIVER_ERROR_PARAMETER = 4,    /**< Invalid parameter. */
+    BEEP_DRIVER_ERROR_NO_MEMORY = 5,    /**< Memory allocation failed. */
+    BEEP_DRIVER_ERROR_ISR       = 6,    /**< Operation is not allowed in ISR context. */
+    BEEP_DRIVER_RESERVED        = 0xFF  /**< Reserved status. */
+} beep_driver_status_t;
 
 /**
  * @brief 初始化蜂鸣器底层并确保蜂鸣器关闭。
- * @retval BSP_BEEP_STATUS_OK 初始化成功。
+ * @retval BEEP_DRIVER_OK 初始化成功。
  */
-bsp_beep_status_t bsp_beep_driver_init(void);
+beep_driver_status_t bsp_beep_driver_init(void);
 
 /**
  * @brief 设置蜂鸣器开关状态。
  * @param active true表示鸣叫，false表示停止。
- * @retval BSP_BEEP_STATUS_OK 设置成功。
- * @retval BSP_BEEP_STATUS_NOT_INITIALIZED 尚未调用初始化函数。
+ * @retval BEEP_DRIVER_OK 设置成功。
+ * @retval BEEP_DRIVER_ERROR_RESOURCE 尚未调用初始化函数。
  * @note 原理图使用S8550驱动有源蜂鸣器，因此MCU输出低电平时鸣叫。
  */
-bsp_beep_status_t bsp_beep_driver_set(bool active);
+beep_driver_status_t bsp_beep_driver_set(bool active);
 
 #ifdef __cplusplus
 }

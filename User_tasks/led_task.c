@@ -10,7 +10,6 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-#include "app_log.h"
 #include "bsp_led_handler.h"
 
 #define LED_TASK_STACK_WORDS      128U                    /**< 128 words，即512 bytes。 */
@@ -30,46 +29,46 @@ static void led_delay(uint32_t delay_ms)
 /**
  * @brief 将七颗灯设置为同一颜色并立即刷新。
  * @param color 七颗灯共同显示的颜色。
- * @retval true 每一步设置和发送都成功。
- * @retval false 任意一步失败。
+ * @retval HANDLER_OK 每一步设置和发送都成功。
+ * @return 其他LED Handler状态表示对应步骤失败。
  */
-static bool led_show_all(bsp_led_color_t color)
+static led_handler_status_t led_show_all(bsp_led_color_t color)
 {
     bsp_led_driver_clear();
 
-    if (!bsp_led_handler_set_all_cameras(color))
+    led_handler_status_t status = bsp_led_handler_set_all_cameras(color);
+    if (HANDLER_OK != status)
     {
-        APP_LOG_ERROR("LED set all cameras failed");
-        return false;
+        return status;
     }
 
-    if (!bsp_led_handler_set_fisheye(color))
+    status = bsp_led_handler_set_fisheye(color);
+    if (HANDLER_OK != status)
     {
-        APP_LOG_ERROR("LED set fisheye failed");
-        return false;
+        return status;
     }
 
-    if (!bsp_led_handler_set_system(color))
+    status = bsp_led_handler_set_system(color);
+    if (HANDLER_OK != status)
     {
-        APP_LOG_ERROR("LED set system failed");
-        return false;
+        return status;
     }
 
-    if (!bsp_led_handler_commit())
+    status = bsp_led_handler_commit();
+    if (HANDLER_OK != status)
     {
-        APP_LOG_ERROR("LED frame commit failed");
-        return false;
+        return status;
     }
 
-    return true;
+    return HANDLER_OK;
 }
 
 /**
  * @brief 运行一轮完整的七灯板级自检。
- * @retval true 本轮所有画面均发送成功。
- * @retval false 任意一次底层操作失败。
+ * @retval HANDLER_OK 本轮所有画面均发送成功。
+ * @return 其他LED Handler状态表示对应步骤失败。
  */
-static bool led_run_demo_cycle(void)
+static led_handler_status_t led_run_demo_cycle(void)
 {
     const bsp_led_color_t off = {.red = 0U, .green = 0U, .blue = 0U};
     const bsp_led_color_t red = {.red = 24U, .green = 0U, .blue = 0U};
@@ -79,31 +78,33 @@ static bool led_run_demo_cycle(void)
     const bsp_led_color_t magenta = {.red = 24U, .green = 0U, .blue = 24U};
     const bsp_led_color_t cyan = {.red = 0U, .green = 24U, .blue = 24U};
 
-    APP_LOG_INFO("LED demo: all red");
-    if (!led_show_all(red))
+    /** @brief 红绿蓝 跑马 雾灯变绿  led7  闪两下  然后led6 blue */
+    led_handler_status_t status = led_show_all(red);
+    if (HANDLER_OK != status)
     {
-        return false;
+        return status;
+    }
+    led_delay(LED_DEMO_COLOR_HOLD_MS);
+#if 0    
+
+    status = led_show_all(green);//所有灯变绿
+    if (HANDLER_OK != status)
+    {
+        return status;
     }
     led_delay(LED_DEMO_COLOR_HOLD_MS);
 
-    APP_LOG_INFO("LED demo: all green");
-    if (!led_show_all(green))//所有灯变绿
+    status = led_show_all(blue);
+    if (HANDLER_OK != status)
     {
-        return false;
+        return status;
     }
     led_delay(LED_DEMO_COLOR_HOLD_MS);
 
-    APP_LOG_INFO("LED demo: all blue");
-    if (!led_show_all(blue))
+    status = led_show_all(off);
+    if (HANDLER_OK != status)
     {
-        return false;
-    }
-    led_delay(LED_DEMO_COLOR_HOLD_MS);
-
-    APP_LOG_INFO("LED demo: all off");
-    if (!led_show_all(off))
-    {
-        return false;
+        return status;
     }
     led_delay(LED_DEMO_CHASE_HOLD_MS);
 
@@ -111,84 +112,95 @@ static bool led_run_demo_cycle(void)
     {
         bsp_led_driver_clear();
 
-        if (!bsp_led_handler_set_camera((bsp_led_camera_id_t)camera, white))
+        status = bsp_led_handler_set_camera((bsp_led_camera_id_t)camera, white);
+        if (HANDLER_OK != status)
         {
-            APP_LOG_ERROR("LED camera set failed: camera=%u", (unsigned int)camera);
-            return false;
+            return status;
         }
 
-        if (!bsp_led_handler_commit())
+        status = bsp_led_handler_commit();
+        if (HANDLER_OK != status)
         {
-            APP_LOG_ERROR("LED camera commit failed: camera=%u", (unsigned int)camera);
-            return false;
+            return status;
         }
 
-        APP_LOG_INFO("LED demo: camera=%u", (unsigned int)camera);
         led_delay(LED_DEMO_CHASE_HOLD_MS);
     }
 
     bsp_led_driver_clear();
-    if (!bsp_led_handler_set_fisheye(magenta))
+    status = bsp_led_handler_set_fisheye(magenta);
+    if (HANDLER_OK != status)
     {
-        APP_LOG_ERROR("LED fisheye set failed");
-        return false;
+        return status;
     }
-    if (!bsp_led_handler_commit())
+    status = bsp_led_handler_commit();
+    if (HANDLER_OK != status)
     {
-        APP_LOG_ERROR("LED fisheye commit failed");
-        return false;
+        return status;
     }
-    APP_LOG_INFO("LED demo: fisheye");
     led_delay(LED_DEMO_COLOR_HOLD_MS);
 
     for (uint8_t blink = 0U; blink < 3U; ++blink)
     {
         bsp_led_driver_clear();
-        if (!bsp_led_handler_set_system(cyan))
+        status = bsp_led_handler_set_system(cyan);
+        if (HANDLER_OK != status)
         {
-            APP_LOG_ERROR("LED system set failed: blink=%u", (unsigned int)blink);
-            return false;
+            return status;
         }
-        if (!bsp_led_handler_commit())
+        status = bsp_led_handler_commit();
+        if (HANDLER_OK != status)
         {
-            APP_LOG_ERROR("LED system commit failed: blink=%u", (unsigned int)blink);
-            return false;
+            return status;
         }
-        APP_LOG_INFO("LED demo: system on blink=%u", (unsigned int)blink);
         led_delay(LED_DEMO_BLINK_HOLD_MS);
 
-        if (!led_show_all(off))
+        status = led_show_all(off);
+        if (HANDLER_OK != status)
         {
-            return false;
+            return status;
         }
         led_delay(LED_DEMO_BLINK_HOLD_MS);
     }
 
     bsp_led_driver_clear();
-    if (!bsp_led_handler_set_all_cameras(green))
+    status = bsp_led_handler_set_all_cameras(green);
+    if (HANDLER_OK != status)
     {
-        APP_LOG_ERROR("LED final cameras set failed");
-        return false;
+        return status;
     }
-    if (!bsp_led_handler_set_fisheye(blue))
+    status = bsp_led_handler_set_fisheye(blue);
+    if (HANDLER_OK != status)
     {
-        APP_LOG_ERROR("LED final fisheye set failed");
-        return false;
+        return status;
     }
-    if (!bsp_led_handler_set_system(white))
+    status = bsp_led_handler_set_system(white);
+    if (HANDLER_OK != status)
     {
-        APP_LOG_ERROR("LED final system set failed");
-        return false;
-    }
-    if (!bsp_led_handler_commit())
-    {
-        APP_LOG_ERROR("LED final frame commit failed");
-        return false;
+        return status;
     }
 
-    APP_LOG_INFO("LED demo cycle passed");
+#endif
+    status = led_show_all(off);
+    if (HANDLER_OK != status)
+    {
+        return status;
+    }
+    led_delay(LED_DEMO_CHASE_HOLD_MS);
+
+    status = bsp_led_handler_set_system(white);
+    if (HANDLER_OK != status)
+    {
+        return status;
+    }
+    status = bsp_led_handler_commit();
+    if (HANDLER_OK != status)
+    {
+        return status;
+    }
+
     led_delay(LED_DEMO_FINAL_HOLD_MS);
-    return true;
+    return HANDLER_OK;
 }
 
 /**
@@ -198,23 +210,28 @@ static bool led_run_demo_cycle(void)
 static void led_task_entry(void *argument)
 {
     (void)argument;
+    led_handler_status_t status = bsp_led_handler_init();
 
-    if (!bsp_led_handler_init())
-    {
-        APP_LOG_ERROR("LED handler init failed");
-    }
-    else
-    {
-        APP_LOG_INFO("LED handler init passed");
-        for (;;)
-        {
-            if (!led_run_demo_cycle())
-            {
-                APP_LOG_ERROR("LED demo cycle failed");
-                break;
-            }
-        }
-    }
+    status = led_run_demo_cycle();
+
+    // if (HANDLER_OK != status)
+    // {
+    //     /* 日志预留：记录LED Handler初始化失败及status。 
+    //     return status;
+    //     */
+    // }
+    // else
+    // {
+    //     for (;;)
+    //     {
+    //         status = led_run_demo_cycle();
+    //         if (HANDLER_OK != status)
+    //         {
+    //             /* 日志预留：记录LED自检步骤失败及status。 */
+    //             break;
+    //         }
+    //     }
+    // }
 
     /* LED故障不再关闭全局中断，避免同时冻结蜂鸣器及其他任务。 */
     for (;;)
@@ -223,7 +240,7 @@ static void led_task_entry(void *argument)
     }
 }
 
-bool led_task_create(void)
+task_status_t led_task_create(void)
 {
     const BaseType_t result = xTaskCreate(led_task_entry,
                                           "led",
@@ -233,12 +250,9 @@ bool led_task_create(void)
                                           NULL);
     if (result != pdPASS)
     {
-        APP_LOG_ERROR("LED task create failed: free_heap=%u",
-                      (unsigned int)xPortGetFreeHeapSize());
-        return false;
+        /* 日志预留：记录LED任务创建失败和FreeRTOS heap余量。 */
+        return TASK_ERROR_NO_MEMORY;
     }
 
-    APP_LOG_INFO("LED task created: free_heap=%u",
-                 (unsigned int)xPortGetFreeHeapSize());
-    return true;
+    return TASK_OK;
 }

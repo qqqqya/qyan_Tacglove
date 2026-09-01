@@ -54,7 +54,6 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     User_tasks/led_task.c
     User_tasks/beep_task.c
     User_tasks/task_manager.c
-    Middlewares/Log/app_log.c
     Middlewares/FreeRTOS/os_hooks.c
 
     ${FREERTOS_KERNEL_DIR}/list.c
@@ -70,7 +69,6 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     BSP/LED
     BSP/BEEP
     User_tasks
-    Middlewares/Log
     Middlewares/FreeRTOS
     ${FREERTOS_KERNEL_DIR}/include
     ${FREERTOS_KERNEL_DIR}/portable/GCC/ARM_CM0
@@ -78,8 +76,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
-    # 置 1 前必须先实现可用的 __io_putchar()，例如 USART 输出。
-    APP_LOG_ENABLE=0
+    # Add user defined symbols
 )
 
 # Remove wrong libob.a library dependency when using cpp files

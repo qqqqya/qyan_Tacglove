@@ -8,7 +8,6 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-#include "app_log.h"
 #include "bsp_beep_handler.h"
 
 #define BEEP_TASK_STACK_WORDS 96U                    /**< 96 words，即384 bytes。 */
@@ -25,39 +24,31 @@ static void beep_delay(uint32_t delay_ms)
 
 /**
  * @brief 执行三次短鸣的上电自检。
- * @retval true 每一次启停操作都成功。
- * @retval false 任意一次Handler调用失败。
+ * @retval BEEP_HANDLER_OK 每一次启停操作都成功。
+ * @return 其他蜂鸣器Handler状态表示对应步骤失败。
  */
-static bool beep_run_startup_test(void)
+static beep_handler_status_t beep_run_startup_test(void)
 {
     for (uint8_t count = 0U; count < BEEP_TEST_COUNT; ++count)
     {
-        bsp_beep_status_t status = bsp_beep_handler_start();
-        if (status != BSP_BEEP_STATUS_OK)
+        beep_handler_status_t status = bsp_beep_handler_start();
+        if (BEEP_HANDLER_OK != status)
         {
-            APP_LOG_ERROR("beep start failed: count=%u status=%d",
-                          (unsigned int)count,
-                          (int)status);
-            return false;
+            return status;
         }
 
-        APP_LOG_INFO("beep started: count=%u", (unsigned int)count);
         beep_delay(BEEP_ON_TIME_MS);
 
         status = bsp_beep_handler_stop();
-        if (status != BSP_BEEP_STATUS_OK)
+        if (BEEP_HANDLER_OK != status)
         {
-            APP_LOG_ERROR("beep stop failed: count=%u status=%d",
-                          (unsigned int)count,
-                          (int)status);
-            return false;
+            return status;
         }
 
-        APP_LOG_INFO("beep stopped: count=%u", (unsigned int)count);
         beep_delay(BEEP_OFF_TIME_MS);
     }
 
-    return true;
+    return BEEP_HANDLER_OK;
 }
 
 /**
@@ -67,27 +58,26 @@ static bool beep_run_startup_test(void)
 static void beep_task_entry(void *argument)
 {
     (void)argument;
-
-    bsp_beep_status_t status = bsp_beep_handler_init();
-    if (status != BSP_BEEP_STATUS_OK)
+    beep_handler_status_t status = bsp_beep_handler_init();
+    if (BEEP_HANDLER_OK != status)
     {
-        APP_LOG_ERROR("beep init failed: status=%d", (int)status);
+        /* 日志预留：记录蜂鸣器Handler初始化失败及status。 */
     }
     else
     {
-        APP_LOG_INFO("beep init passed");
-        if (!beep_run_startup_test())
+        status = beep_run_startup_test();
+        if (BEEP_HANDLER_OK != status)
         {
-            APP_LOG_ERROR("beep startup test failed");
-        }
-        else
-        {
-            APP_LOG_INFO("beep startup test passed");
+            /* 日志预留：记录蜂鸣器自检步骤失败及status。 */
         }
     }
 
     /* 无论自检是否成功，都再次请求关闭，避免错误路径留下持续鸣叫。 */
-    (void)bsp_beep_handler_stop();
+    status = bsp_beep_handler_stop();
+    if (BEEP_HANDLER_OK != status)
+    {
+        /* 日志预留：记录蜂鸣器安全关闭失败及status。 */
+    }
 
     /* 当前关闭vTaskDelete，任务完成后挂起自身并保留调试现场。 */
     for (;;)
@@ -96,7 +86,7 @@ static void beep_task_entry(void *argument)
     }
 }
 
-bool beep_task_create(void)
+task_status_t beep_task_create(void)
 {
     const BaseType_t result = xTaskCreate(beep_task_entry,
                                           "beep",
@@ -106,12 +96,9 @@ bool beep_task_create(void)
                                           NULL);
     if (result != pdPASS)
     {
-        APP_LOG_ERROR("beep task create failed: free_heap=%u",
-                      (unsigned int)xPortGetFreeHeapSize());
-        return false;
+        /* 日志预留：记录蜂鸣器任务创建失败和FreeRTOS heap余量。 */
+        return TASK_ERROR_NO_MEMORY;
     }
 
-    APP_LOG_INFO("beep task created: free_heap=%u",
-                 (unsigned int)xPortGetFreeHeapSize());
-    return true;
+    return TASK_OK;
 }

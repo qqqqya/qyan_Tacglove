@@ -3,7 +3,7 @@
  * @brief STM32F042 通过 PA4 发送 SK6805-EC15 单总线数据。
  * @details
  * SK6805 每颗灯接收 24 bit，顺序为 G7..G0、R7..R0、B7..B0。
- * 当前时序按 48 MHz Cortex-M0 标定，因此发送函数强制使用 O2 优化。
+ * 当前时序按48 MHz Cortex-M0标定，修改编译优化等级后必须重新测量波形。
  */
 #include "bsp_led_driver.h"
 
@@ -16,46 +16,30 @@
 #define NOP_8()  do { NOP_4(); NOP_4(); } while (0)
 #define NOP_16() do { NOP_8(); NOP_8(); } while (0)
 
+/** @brief 逻辑0高电平延时，目标约0.3 us。 */
+#define SK6805_DELAY_HIGH_ZERO() do { NOP_8(); } while (0)
+
+/** @brief 逻辑1高电平延时，目标约0.9 us。 */
+#define SK6805_DELAY_HIGH_ONE()  do { NOP_16(); NOP_16(); NOP_8(); } while (0)
+
+/** @brief 逻辑0低电平补偿，使码元周期不小于1.2 us。 */
+#define SK6805_DELAY_LOW_ZERO()  do { NOP_16(); NOP_16(); NOP_4(); } while (0)
+
+/** @brief 逻辑1低电平补偿，使码元周期不小于1.2 us。 */
+#define SK6805_DELAY_LOW_ONE()   do { NOP_4(); } while (0)
+
 /**
  * @brief 7 颗灯的发送缓存。
  * @details 第一维是串行数据顺序，第二维固定为 G、R、B。
  */
 static uint8_t s_pixels[BSP_LED_PIXEL_COUNT][3];
 
-/** @brief 产生逻辑 0 所需的高电平保持时间，目标约 0.3 us。 */
-static inline __attribute__((always_inline)) void sk6805_delay_high_zero(void)
-{
-    NOP_8();
-}
-
-/** @brief 产生逻辑 1 所需的高电平保持时间，目标约 0.9 us。 */
-static inline __attribute__((always_inline)) void sk6805_delay_high_one(void)
-{
-    NOP_16();
-    NOP_16();
-    NOP_8();
-}
-
-/** @brief 补足逻辑 0 的低电平时间，使码元周期不小于 1.2 us。 */
-static inline __attribute__((always_inline)) void sk6805_delay_low_zero(void)
-{
-    NOP_16();
-    NOP_16();
-    NOP_4();
-}
-
-/** @brief 补足逻辑 1 的低电平时间，使码元周期不小于 1.2 us。 */
-static inline __attribute__((always_inline)) void sk6805_delay_low_one(void)
-{
-    NOP_4();
-}
-
 /**
  * @brief 按最高位优先顺序发送一个字节。
  * @param value 要发送的 8 bit 数据。
- * @note 本函数必须内联到 O2 优化的 bsp_led_driver_show() 中，禁止单独调用。
+ * @note 单个码元内部使用NOP宏，不依赖函数级编译器attribute。
  */
-static inline __attribute__((always_inline)) void sk6805_write_byte(uint8_t value)
+static void sk6805_write_byte(uint8_t value)
 {
     for (uint8_t bit = 0U; bit < 8U; ++bit)
     {
@@ -63,15 +47,15 @@ static inline __attribute__((always_inline)) void sk6805_write_byte(uint8_t valu
 
         if ((value & 0x80U) != 0U)
         {
-            sk6805_delay_high_one();
+            SK6805_DELAY_HIGH_ONE();
             RGB_Ctrl_GPIO_Port->BSRR = (uint32_t)RGB_Ctrl_Pin << 16U;
-            sk6805_delay_low_one();
+            SK6805_DELAY_LOW_ONE();
         }
         else
         {
-            sk6805_delay_high_zero();
+            SK6805_DELAY_HIGH_ZERO();
             RGB_Ctrl_GPIO_Port->BSRR = (uint32_t)RGB_Ctrl_Pin << 16U;
-            sk6805_delay_low_zero();
+            SK6805_DELAY_LOW_ZERO();
         }
 
         value <<= 1U;
@@ -81,11 +65,11 @@ static inline __attribute__((always_inline)) void sk6805_write_byte(uint8_t valu
 /**
  * @brief 在一帧数据结束后保持低电平，使所有 SK6805 锁存新颜色。
  * @note 当前 SK6805-EC15-001 A/1 要求复位低电平至少 200 us；
- *       该循环按 48 MHz、O2 编译标定为大于 200 us。
+ *       该循环按48 MHz标定为大于200 us。
  */
-static inline __attribute__((always_inline)) void sk6805_reset_latch(void)
+static void sk6805_reset_latch(void)
 {
-    /* O2 下循环体约为 3 个 CPU 周期，总时间大于器件要求的 200 us。 */
+    /* Release构建下循环总时间大于器件要求的200 us。 */
     for (uint32_t count = 0U; count < SK6805_RESET_LOOP_COUNT; ++count)
     {
         __NOP();
@@ -98,18 +82,18 @@ void bsp_led_driver_init(void)
     bsp_led_driver_clear();
 }
 
-bsp_led_status_t bsp_led_driver_set_pixel(uint8_t pixel_index, bsp_led_color_t color)
+led_driver_status_t bsp_led_driver_set_pixel(uint8_t pixel_index, bsp_led_color_t color)
 {
     if (pixel_index >= BSP_LED_PIXEL_COUNT)
     {
-        return BSP_LED_STATUS_INVALID_ARGUMENT;
+        return LED_ERRORPARAMETER;
     }
 
     /* SK6805 协议不是 RGB 顺序，必须转换为 G-R-B 后再存入发送缓存。 */
     s_pixels[pixel_index][0] = color.green;
     s_pixels[pixel_index][1] = color.red;
     s_pixels[pixel_index][2] = color.blue;
-    return BSP_LED_STATUS_OK;
+    return LED_OK;
 }
 
 void bsp_led_driver_clear(void)
@@ -122,11 +106,11 @@ void bsp_led_driver_clear(void)
     }
 }
 
-__attribute__((optimize("O2"))) bsp_led_status_t bsp_led_driver_show(void)
+led_driver_status_t bsp_led_driver_show(void)
 {
     if (SystemCoreClock != SK6805_REQUIRED_CORE_CLOCK_HZ)
     {
-        return BSP_LED_STATUS_UNSUPPORTED_CLOCK;
+        return LED_ERRORRESOURCE;
     }
 
     /*
@@ -151,5 +135,5 @@ __attribute__((optimize("O2"))) bsp_led_status_t bsp_led_driver_show(void)
         __enable_irq();
     }
 
-    return BSP_LED_STATUS_OK;
+    return LED_OK;
 }

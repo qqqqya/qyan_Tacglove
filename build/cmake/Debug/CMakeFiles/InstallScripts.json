@@ -1,8 +1,8 @@
 {
 	"InstallScripts" : 
 	[
-		"D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/cmake_install.cmake",
-		"D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/cmake/stm32cubemx/cmake_install.cmake"
+		"D:/M0/five_data/M0_ing/build/cmake/Debug/cmake_install.cmake",
+		"D:/M0/five_data/M0_ing/build/cmake/Debug/cmake/stm32cubemx/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

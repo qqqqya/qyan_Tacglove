@@ -4,27 +4,24 @@
  */
 #include "task_manager.h"
 
-#include "app_log.h"
 #include "beep_task.h"
 #include "led_task.h"
 
-bool task_manager_init(void)
+task_status_t task_manager_init(void)
 {
-    bool result = led_task_create();
-    if (!result)
+    task_status_t result = led_task_create();
+    if (TASK_OK != result)
     {
-        APP_LOG_ERROR("LED task registration failed");
-        return false;
+        /* 日志预留：记录LED任务注册失败及result。 */
+        return result;
     }
-    APP_LOG_INFO("LED task registration passed");
 
     result = beep_task_create();
-    if (!result)
+    if (TASK_OK != result)
     {
-        APP_LOG_ERROR("beep task registration failed");
-        return false;
+        /* 日志预留：记录蜂鸣器任务注册失败及result。 */
+        return result;
     }
-    APP_LOG_INFO("beep task registration passed");
 
-    return true;
+    return TASK_OK;
 }

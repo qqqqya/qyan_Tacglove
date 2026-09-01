@@ -94,8 +94,10 @@ int main(void)
    * 统一创建所有应用任务。任务创建失败通常表示 FreeRTOS heap 不足，
    * 此时不允许启动一个缺少关键任务的系统。
    */
-  if (!task_manager_init())
+  task_status_t task_status = task_manager_init();
+  if (TASK_OK != task_status)
   {
+    /* 日志预留：记录应用任务初始化失败及task_status。 */
     Error_Handler();
   }
 

@@ -8,7 +8,6 @@
 #ifndef BSP_LED_DRIVER_H
 #define BSP_LED_DRIVER_H
 
-#include <stdbool.h>
 #include <stdint.h>
 
 #ifdef __cplusplus
@@ -29,10 +28,15 @@ typedef struct
 /** @brief LED Driver 层函数返回状态。 */
 typedef enum
 {
-    BSP_LED_STATUS_OK = 0,             /**< 操作成功。 */
-    BSP_LED_STATUS_INVALID_ARGUMENT,   /**< 像素序号等输入参数非法。 */
-    BSP_LED_STATUS_UNSUPPORTED_CLOCK   /**< 系统时钟不是驱动标定的 48 MHz。 */
-} bsp_led_status_t;
+    LED_OK             = 0,    /**< Operation completed successfully. */
+    LED_ERROR          = 1,    /**< General runtime error. */
+    LED_ERRORTIMEOUT   = 2,    /**< Operation timed out. */
+    LED_ERRORRESOURCE  = 3,    /**< Required resource is unavailable. */
+    LED_ERRORPARAMETER = 4,    /**< Invalid parameter. */
+    LED_ERRORNOMEMORY  = 5,    /**< Memory allocation failed. */
+    LED_ERRORISR       = 6,    /**< Operation is not allowed in ISR context. */
+    LED_RESERVED       = 0xFF  /**< Reserved status. */
+} led_driver_status_t;
 
 /**
  * @brief 初始化 SK6805 底层驱动和软件帧缓存。
@@ -45,11 +49,11 @@ void bsp_led_driver_init(void);
  * @brief 修改一个物理灯珠的缓存颜色。
  * @param pixel_index 数据流中的物理序号，0 表示最先接收数据的灯珠。
  * @param color 要写入的 RGB 颜色。
- * @retval BSP_LED_STATUS_OK 写入成功。
- * @retval BSP_LED_STATUS_INVALID_ARGUMENT pixel_index 超出 0~6。
+ * @retval LED_OK 写入成功。
+ * @retval LED_ERRORPARAMETER pixel_index超出0~6。
  * @note 调用后必须再调用 bsp_led_driver_show()，灯珠才会更新。
  */
-bsp_led_status_t bsp_led_driver_set_pixel(uint8_t pixel_index, bsp_led_color_t color);
+led_driver_status_t bsp_led_driver_set_pixel(uint8_t pixel_index, bsp_led_color_t color);
 
 /**
  * @brief 将全部物理灯珠的缓存颜色清零。
@@ -59,11 +63,11 @@ void bsp_led_driver_clear(void);
 
 /**
  * @brief 把完整的 7 像素缓存发送到 SK6805 灯链。
- * @retval BSP_LED_STATUS_OK 发送完成。
- * @retval BSP_LED_STATUS_UNSUPPORTED_CLOCK 当前系统时钟不是 48 MHz。
+ * @retval LED_OK 发送完成。
+ * @retval LED_ERRORRESOURCE 当前系统时钟不是48 MHz。
  * @warning 发送期间会短暂关闭中断，以保证单总线脉宽不被抢占破坏。
  */
-bsp_led_status_t bsp_led_driver_show(void);
+led_driver_status_t bsp_led_driver_show(void);
 
 #ifdef __cplusplus
 }
