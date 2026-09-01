@@ -1,4 +1,4 @@
-# Install script for directory: D:/M0/five_data/M0_ing/cmake/stm32cubemx
+# Install script for directory: D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/M0/five_data/M0_ing/build/cmake/Release/cmake/stm32cubemx/install_local_manifest.txt"
+  file(WRITE "D:/M0/five_data/qyan_Tacglove/build/cmake/Release/cmake/stm32cubemx/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

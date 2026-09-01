@@ -8,41 +8,41 @@
 static beep_handler_status_t beep_handler_convert_driver_status(
     beep_driver_status_t driver_status)
 {
-    beep_handler_status_t handler_status = BEEP_HANDLER_ERROR;
+    beep_handler_status_t handler_status = HANDLER_BEEP_ERROR;
 
     switch (driver_status)
     {
         case BEEP_DRIVER_OK:
-            handler_status = BEEP_HANDLER_OK;
+            handler_status = HANDLER_BEEP_OK;
             break;
 
         case BEEP_DRIVER_ERROR_TIMEOUT:
-            handler_status = BEEP_HANDLER_ERROR_TIMEOUT;
+            handler_status = HANDLER_BEEP_TIMEOUT;
             break;
 
         case BEEP_DRIVER_ERROR_RESOURCE:
-            handler_status = BEEP_HANDLER_ERROR_RESOURCE;
+            handler_status = HANDLER_BEEP_RESOURCE;
             break;
 
         case BEEP_DRIVER_ERROR_PARAMETER:
-            handler_status = BEEP_HANDLER_ERROR_PARAMETER;
+            handler_status = HANDLER_BEEP_PARAMETER;
             break;
 
-        case BEEP_DRIVER_ERROR_NO_MEMORY:
-            handler_status = BEEP_HANDLER_ERROR_NO_MEMORY;
-            break;
+        // case BEEP_DRIVER_ERROR_NO_MEMORY:
+        //     handler_status = HANDLER_BEEP_ERROR_NO_MEMORY;
+        //     break;
 
-        case BEEP_DRIVER_ERROR_ISR:
-            handler_status = BEEP_HANDLER_ERROR_ISR;
-            break;
+        // case BEEP_DRIVER_ERROR_ISR:
+        //     handler_status = HANDLER_BEEP_ERROR_ISR;
+        //     break;
 
         case BEEP_DRIVER_RESERVED:
-            handler_status = BEEP_HANDLER_RESERVED;
+            handler_status = HANDLER_BEEP_RESERVED;
             break;
 
         case BEEP_DRIVER_ERROR:
         default:
-            handler_status = BEEP_HANDLER_ERROR;
+            handler_status = HANDLER_BEEP_ERROR;
             break;
     }
 

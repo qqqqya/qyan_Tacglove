@@ -61,6 +61,8 @@ void Error_Handler(void);
 #define BEEP_GPIO_Port GPIOA
 #define RGB_Ctrl_Pin GPIO_PIN_4
 #define RGB_Ctrl_GPIO_Port GPIOA
+#define KEY_Capdata_Pin GPIO_PIN_6
+#define KEY_Capdata_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

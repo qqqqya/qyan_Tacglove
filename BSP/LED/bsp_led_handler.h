@@ -78,6 +78,12 @@ led_handler_status_t bsp_led_handler_set_fisheye(bsp_led_color_t color);
 led_handler_status_t bsp_led_handler_set_system(bsp_led_color_t color);
 
 /**
+ * @brief 清空全部逻辑灯的颜色缓存。
+ * @note 本函数不立即刷新灯珠，需随后调用bsp_led_handler_commit()。
+ */
+void bsp_led_handler_clear(void);
+
+/**
  * @brief 将 handler 层设置的全部颜色提交到物理灯链。
  * @retval HANDLER_OK 发送成功。
  * @retval HANDLER_ERRORRESOURCE 系统时钟或底层资源不满足要求。

@@ -51,8 +51,10 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     BSP/LED/bsp_led_handler.c
     BSP/BEEP/bsp_beep_driver.c
     BSP/BEEP/bsp_beep_handler.c
+    BSP/KEY/bsp_key_handler.c
     User_tasks/led_task.c
-    User_tasks/beep_task.c
+    User_tasks/key_task.c
+    User_tasks/system_event.c
     User_tasks/task_manager.c
     Middlewares/FreeRTOS/os_hooks.c
 
@@ -68,6 +70,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     BSP/LED
     BSP/BEEP
+    BSP/KEY
     User_tasks
     Middlewares/FreeRTOS
     ${FREERTOS_KERNEL_DIR}/include

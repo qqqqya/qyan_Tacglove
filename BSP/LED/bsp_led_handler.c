@@ -14,6 +14,7 @@ static const uint8_t s_camera_to_pixel[BSP_LED_CAMERA_COUNT] = {6U, 5U, 4U, 3U, 
 static const uint8_t s_fisheye_pixel = 1U; /**< LED6，鱼眼相机指示灯。 */
 static const uint8_t s_system_pixel = 0U;  /**< LED7，系统状态指示灯。 */
 
+#if 0
 /**
  * @brief 将LED Driver层状态转换为Handler层状态。
  * @param driver_status LED Driver层返回状态。
@@ -62,7 +63,7 @@ static led_handler_status_t led_handler_convert_driver_status(
 
     return handler_status;
 }
-
+#endif
 led_handler_status_t bsp_led_handler_init(void)
 {
     bsp_led_driver_init();
@@ -74,6 +75,7 @@ led_handler_status_t bsp_led_handler_init(void)
     }
 
     return HANDLER_OK;
+    // return HANDLER_ERROR;
 }
 
 led_handler_status_t bsp_led_handler_set_camera(bsp_led_camera_id_t camera,
@@ -84,9 +86,13 @@ led_handler_status_t bsp_led_handler_set_camera(bsp_led_camera_id_t camera,
         return HANDLER_ERRORPARAMETER;
     }
 
-    led_driver_status_t driver_status =
+    led_driver_status_t driver_ret =
         bsp_led_driver_set_pixel(s_camera_to_pixel[(uint8_t)camera], color);
-    return led_handler_convert_driver_status(driver_status);
+        if (LED_OK != driver_ret)
+        {
+            return driver_ret;
+        }
+    return HANDLER_OK;
 }
 
 led_handler_status_t bsp_led_handler_set_all_cameras(bsp_led_color_t color)
@@ -106,22 +112,39 @@ led_handler_status_t bsp_led_handler_set_all_cameras(bsp_led_color_t color)
 
 led_handler_status_t bsp_led_handler_set_fisheye(bsp_led_color_t color)
 {
-    led_driver_status_t driver_status =
+    led_driver_status_t driver_ret =
         bsp_led_driver_set_pixel(s_fisheye_pixel, color);
-    return led_handler_convert_driver_status(driver_status);
+        if (LED_OK != driver_ret)
+        {
+            return driver_ret;
+        }
+    return HANDLER_OK;
 }
 
 led_handler_status_t bsp_led_handler_set_system(bsp_led_color_t color)
 {
-    led_driver_status_t driver_status =
+    led_driver_status_t driver_ret =
         bsp_led_driver_set_pixel(s_system_pixel, color);
-    return led_handler_convert_driver_status(driver_status);
+        if (LED_OK != driver_ret)
+        {
+            return driver_ret;
+        }
+    return HANDLER_OK;
+}
+
+void bsp_led_handler_clear(void)
+{
+    bsp_led_driver_clear();
 }
 
 led_handler_status_t bsp_led_handler_commit(void)
 {
-    led_driver_status_t driver_status = bsp_led_driver_show();
-    return led_handler_convert_driver_status(driver_status);
+    led_driver_status_t driver_ret = bsp_led_driver_show();
+        if (LED_OK != driver_ret)
+        {
+            return driver_ret;
+        }
+    return HANDLER_OK;
 }
 
 led_handler_status_t bsp_led_handler_show_startup_state(void)

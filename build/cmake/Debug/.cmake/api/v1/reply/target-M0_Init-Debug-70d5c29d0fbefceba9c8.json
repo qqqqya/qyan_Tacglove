@@ -1,0 +1,631 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "M0_Init.elf"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"cmake/stm32cubemx/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 84,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 89,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 70,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 78,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 49,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "STM32_Drivers::@768a070a0fe75716b479"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "stm32cubemx::@768a070a0fe75716b479"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3 -std=gnu11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "DEBUG"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "STM32F042x6"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "USE_HAL_DRIVER"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/BSP/LED"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/BSP/BEEP"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/BSP/KEY"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/User_tasks"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/../FreeRTOS/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+				}
+			],
+			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -x assembler-with-cpp -MMD -MP -g"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "DEBUG"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "STM32F042x6"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "USE_HAL_DRIVER"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/BSP/LED"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/BSP/BEEP"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/BSP/KEY"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/User_tasks"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/../FreeRTOS/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+				}
+			],
+			"language" : "ASM",
+			"sourceIndexes" : 
+			[
+				7
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "STM32_Drivers::@768a070a0fe75716b479"
+		}
+	],
+	"id" : "M0_Init::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -O0 -g3",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-mcpu=cortex-m0  -T \"D:/M0/five_data/qyan_Tacglove/STM32F042XX_FLASH.ld\" --specs=nano.specs -Wl,-Map=M0_Init.map -Wl,--gc-sections -Wl,--print-memory-usage",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "STM32_Drivers::@768a070a0fe75716b479"
+		},
+		{
+			"backtrace" : 3,
+			"fragment" : "m"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "stm32cubemx::@768a070a0fe75716b479"
+		}
+	],
+	"name" : "M0_Init",
+	"nameOnDisk" : "M0_Init.elf",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				7
+			]
+		},
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/main.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/gpio.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/stm32f0xx_it.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/stm32f0xx_hal_msp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/stm32f0xx_hal_timebase_tim.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/sysmem.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/syscalls.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 1,
+			"path" : "startup_stm32f042x6.s",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "BSP/LED/bsp_led_driver.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "BSP/LED/bsp_led_handler.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "BSP/BEEP/bsp_beep_driver.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "BSP/BEEP/bsp_beep_handler.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "BSP/KEY/bsp_key_handler.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "User_tasks/led_task.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "User_tasks/key_task.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "User_tasks/system_event.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "User_tasks/task_manager.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "Middlewares/FreeRTOS/os_hooks.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "D:/M0/five_data/FreeRTOS/list.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "D:/M0/five_data/FreeRTOS/queue.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "D:/M0/five_data/FreeRTOS/tasks.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "D:/M0/five_data/FreeRTOS/portable/MemMang/heap_4.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "D:/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/port.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "D:/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/portasm.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f0xx.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/cmake/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "EXECUTABLE"
+}

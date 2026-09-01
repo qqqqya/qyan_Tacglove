@@ -24,7 +24,7 @@ static void beep_delay(uint32_t delay_ms)
 
 /**
  * @brief 执行三次短鸣的上电自检。
- * @retval BEEP_HANDLER_OK 每一次启停操作都成功。
+ * @retval HANDLER_BEEP_OK 每一次启停操作都成功。
  * @return 其他蜂鸣器Handler状态表示对应步骤失败。
  */
 static beep_handler_status_t beep_run_startup_test(void)
@@ -32,7 +32,7 @@ static beep_handler_status_t beep_run_startup_test(void)
     for (uint8_t count = 0U; count < BEEP_TEST_COUNT; ++count)
     {
         beep_handler_status_t status = bsp_beep_handler_start();
-        if (BEEP_HANDLER_OK != status)
+        if (HANDLER_BEEP_OK != status)
         {
             return status;
         }
@@ -40,7 +40,7 @@ static beep_handler_status_t beep_run_startup_test(void)
         beep_delay(BEEP_ON_TIME_MS);
 
         status = bsp_beep_handler_stop();
-        if (BEEP_HANDLER_OK != status)
+        if (HANDLER_BEEP_OK != status)
         {
             return status;
         }
@@ -48,7 +48,7 @@ static beep_handler_status_t beep_run_startup_test(void)
         beep_delay(BEEP_OFF_TIME_MS);
     }
 
-    return BEEP_HANDLER_OK;
+    return HANDLER_BEEP_OK;
 }
 
 /**
@@ -59,14 +59,14 @@ static void beep_task_entry(void *argument)
 {
     (void)argument;
     beep_handler_status_t status = bsp_beep_handler_init();
-    if (BEEP_HANDLER_OK != status)
+    if (HANDLER_BEEP_OK != status)
     {
         /* 日志预留：记录蜂鸣器Handler初始化失败及status。 */
     }
     else
     {
         status = beep_run_startup_test();
-        if (BEEP_HANDLER_OK != status)
+        if (HANDLER_BEEP_OK != status)
         {
             /* 日志预留：记录蜂鸣器自检步骤失败及status。 */
         }
@@ -74,7 +74,7 @@ static void beep_task_entry(void *argument)
 
     /* 无论自检是否成功，都再次请求关闭，避免错误路径留下持续鸣叫。 */
     status = bsp_beep_handler_stop();
-    if (BEEP_HANDLER_OK != status)
+    if (HANDLER_BEEP_OK != status)
     {
         /* 日志预留：记录蜂鸣器安全关闭失败及status。 */
     }
