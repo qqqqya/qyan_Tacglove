@@ -1,0 +1,5 @@
+D:/M0/five_data/qyan_Tacglove/Core/Src/usart.c:25:5:__io_putchar	16	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/usart.c:33:5:__io_getchar	16	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/usart.c:84:6:MX_USART2_UART_Init	8	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/usart.c:114:6:HAL_UART_MspInit	56	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/usart.c:177:6:HAL_UART_MspDeInit	16	static

@@ -18,6 +18,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -26,7 +28,9 @@
 #include "task.h"
 #include "task_manager.h"
 
+#include <stdio.h>
 /* USER CODE END Includes */
+
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
@@ -89,7 +93,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+
+  printf("Hello World\r\n");
   /*
    * 统一创建所有应用任务。任务创建失败通常表示 FreeRTOS heap 不足，
    * 此时不允许启动一个缺少关键任务的系统。
