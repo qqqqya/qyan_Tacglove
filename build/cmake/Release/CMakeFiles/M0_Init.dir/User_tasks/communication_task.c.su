@@ -1,0 +1,4 @@
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:139:13:communication_send_frame.isra	40	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:161:13:communication_send_command_error.constprop	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:386:13:communication_task_entry	112	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:447:15:communication_task_create	16	static

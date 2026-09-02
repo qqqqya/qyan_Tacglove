@@ -14,6 +14,7 @@
 
 #include "bsp_key_handler.h"
 #include "system_event.h"
+#include "system_status.h"
 
 #define KEY_TASK_STACK_WORDS       64U                    /**< 64 words，即256 bytes。 */
 #define KEY_TASK_PRIORITY          (tskIDLE_PRIORITY + 2U) /**< 高于显示任务，及时采样。 */
@@ -69,11 +70,34 @@ static void key_task_entry(void *argument)
 
                 if (stable_pressed)
                 {
-                    const system_event_t event = {
-                        .type = SYSTEM_EVENT_CAPTURE_KEY_PRESSED};
+                    const system_status_snapshot_t status =
+                        system_status_get();
+                    system_event_type_t event_type = SYSTEM_EVENT_NONE;
 
-                    /* 已做消抖且长按只产生一次事件，队列正常情况下不会满。 */
-                    (void)system_event_publish(&event, 0U);
+                    if (SYSTEM_STATE_IDLE == status.state)
+                    {
+                        event_type = SYSTEM_EVENT_CAPTURE_START_REQUEST;
+                    }
+                    else if (SYSTEM_STATE_CAPTURING == status.state)
+                    {
+                        event_type = SYSTEM_EVENT_CAPTURE_STOP_REQUEST;
+                    }
+                    else
+                    {
+                        /* 自检、准备和故障期间忽略按键，避免状态重入。 */
+                    }
+
+                    if (SYSTEM_EVENT_NONE != event_type)
+                    {
+                        const system_event_t event = {
+                            .type = event_type,
+                            .timestamp_ms =
+                                (uint32_t)xTaskGetTickCount() *
+                                (uint32_t)portTICK_PERIOD_MS};
+
+                        /* 物理按键事件同时送往LED状态机和通信观察队列。 */
+                        (void)system_event_publish(&event, 0U);
+                    }
                 }
             }
         }

@@ -1,0 +1,4 @@
+D:/M0/five_data/qyan_Tacglove/BSP/UART/bsp_uart_driver.c:25:22:bsp_uart_driver_init	24	static
+D:/M0/five_data/qyan_Tacglove/BSP/UART/bsp_uart_driver.c:49:8:bsp_uart_driver_read	24	static
+D:/M0/five_data/qyan_Tacglove/BSP/UART/bsp_uart_driver.c:74:22:bsp_uart_driver_transmit_dma	32	static
+D:/M0/five_data/qyan_Tacglove/BSP/UART/bsp_uart_driver.c:103:6:bsp_uart_driver_tx_busy	8	static

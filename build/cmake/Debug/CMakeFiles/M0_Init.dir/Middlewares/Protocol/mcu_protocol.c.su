@@ -1,0 +1,7 @@
+D:/M0/five_data/qyan_Tacglove/Middlewares/Protocol/mcu_protocol.c:26:17:protocol_crc16_update	24	static
+D:/M0/five_data/qyan_Tacglove/Middlewares/Protocol/mcu_protocol.c:39:13:protocol_parser_wait_for_sof	16	static
+D:/M0/five_data/qyan_Tacglove/Middlewares/Protocol/mcu_protocol.c:52:13:protocol_parser_resync_from_byte	16	static
+D:/M0/five_data/qyan_Tacglove/Middlewares/Protocol/mcu_protocol.c:62:10:mcu_protocol_crc16	32	static
+D:/M0/five_data/qyan_Tacglove/Middlewares/Protocol/mcu_protocol.c:77:23:mcu_protocol_encode	40	static
+D:/M0/five_data/qyan_Tacglove/Middlewares/Protocol/mcu_protocol.c:122:6:mcu_protocol_parser_init	16	static
+D:/M0/five_data/qyan_Tacglove/Middlewares/Protocol/mcu_protocol.c:133:29:mcu_protocol_parser_consume	32	static

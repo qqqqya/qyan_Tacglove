@@ -39,11 +39,12 @@ extern uint32_t SystemCoreClock;
 
 /*
  * 内存策略：使用 heap_4 动态分配任务控制块和任务栈。
- * 2 KB 是在 STM32F042 仅 6 KB SRAM 条件下为首阶段任务保留的内核堆。
+ * 2560 B用于任务控制块、任务栈、控制队列和按键观察队列；阶段3新增
+ * ROS桥接事件通道后仍保留运行余量，同时控制STM32F042总SRAM占用。
  */
 #define configSUPPORT_STATIC_ALLOCATION         0
 #define configSUPPORT_DYNAMIC_ALLOCATION        1
-#define configTOTAL_HEAP_SIZE                   2048U
+#define configTOTAL_HEAP_SIZE                   2560U
 #define configAPPLICATION_ALLOCATED_HEAP        0
 
 /* 故障检测：内存申请失败和任务栈溢出时进入 os_hooks.c 的停机钩子。 */

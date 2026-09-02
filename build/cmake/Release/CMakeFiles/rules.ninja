@@ -36,7 +36,7 @@ rule C_COMPILER__M0_Init_unscanned_Release
 
 rule C_EXECUTABLE_LINKER__M0_Init_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && D:\Soft\MinGW\arm-gnu-toolchain-15.2\bin\arm-none-eabi-gcc.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
-  description = Linking C executable $TARGET_FILE
+  description = Linking C executable $TARGET_FILE; Generating M0_Init_STAGE3_R1.elf/.hex/.bin
   restat = $RESTAT
 
 

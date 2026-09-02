@@ -1,0 +1,4 @@
+D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:47:13:uart_test_send.constprop.isra	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:80:13:uart_test_send_text.isra	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:187:13:uart_test_task_entry	48	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:222:15:uart_test_task_create	16	static

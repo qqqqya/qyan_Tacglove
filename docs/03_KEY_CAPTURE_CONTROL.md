@@ -18,9 +18,9 @@ BSP/KEY/bsp_key_handler       只解释“低电平等于按下”
    ↓
 User_tasks/key_task           20 ms扫描、约60 ms消抖、一次按下只触发一次
    ↓
-User_tasks/system_event       FreeRTOS Queue传递SYSTEM_EVENT_CAPTURE_KEY_PRESSED
-   ↓
-User_tasks/led_task           消费事件并运行采集状态机
+User_tasks/system_event       控制队列+通信观察队列
+   ├── User_tasks/led_task    消费明确的START/STOP并运行采集状态机
+   └── communication_task     只观察物理PB6事件并异步上报PC
    ├── BSP/LED                显示设备灯和LED7状态
    ├── BSP/BEEP               开始/结束时短鸣一次
    └── TODO采集任务队列       后续接入相机、存储和通信任务
@@ -40,7 +40,9 @@ PB6引脚和低电平有效这两个板级细节，再增加Driver只会形成�
 6. LED、蜂鸣器、事件队列或未来采集设备出现不可恢复错误时，七颗灯尝试
    红色常亮，表示硬件故障、通信中断或数据丢包等故障。
 
-长按按键只产生一次事件。必须先松开并再次按下，才会产生下一次事件。
+长按按键只产生一次事件。必须先松开并再次按下，才会产生下一次事件。待机时
+按键生成 `SYSTEM_EVENT_CAPTURE_START_REQUEST`，采集中生成
+`SYSTEM_EVENT_CAPTURE_STOP_REQUEST`；自检、准备和故障期间的按键被忽略。
 上电自检过程中产生的按键事件会被清除，必须进入待机后重新按键。
 
 ## 4. 当前占位内容
@@ -63,7 +65,8 @@ PB6引脚和低电平有效这两个板级细节，再增加Driver只会形成�
 | --- | ---: | --- |
 | 按键扫描周期 | 20 ms | `User_tasks/key_task.c` |
 | 消抖确认样本 | 3次，约60 ms | `User_tasks/key_task.c` |
-| 系统事件队列长度 | 4条 | `User_tasks/system_event.c` |
+| LED控制队列长度 | 4条 | `User_tasks/system_event.c` |
+| 物理按键观察队列长度 | 4条 | `User_tasks/system_event.c` |
 | 自检绿色闪烁 | 3次，250 ms半周期 | `User_tasks/led_task.c` |
 | 准备蓝色闪烁 | 3次，250 ms半周期 | `User_tasks/led_task.c` |
 | 蜂鸣器确认声 | 120 ms | `User_tasks/led_task.c` |

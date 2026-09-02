@@ -1,4 +1,6 @@
-D:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c:15:15:system_event_init	8	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c:27:15:system_event_publish	8	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c:48:15:system_event_wait	8	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c:69:6:system_event_clear	8	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c:21:15:system_event_init	8	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c:58:15:system_event_publish_control	8	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c:35:15:system_event_publish	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c:79:15:system_event_wait	8	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c:100:15:system_event_observe	8	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c:121:6:system_event_clear	8	static

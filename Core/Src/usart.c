@@ -21,57 +21,10 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-/* 重定义 __io_putchar，使 printf 输出到 USART2 */
-int __io_putchar(int ch)
-{
-    /* 阻塞方式发送单个字符 */
-    HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
-    return ch;
-}
-
-/* 重定义 __io_getchar，使 scanf/getchar 从 USART2 读取 */
-int __io_getchar(void)
-{
-    uint8_t ch;
-    /* 阻塞方式接收单个字符 */
-    HAL_UART_Receive(&huart2, &ch, 1, HAL_MAX_DELAY);
-    return ch;
-}
-
-
-#if 0
-// #ifdef __GNUC__
-//      #define PUTCHAR_PROTOTYPE int _io_putchar(int ch)
-//  #else
-//      #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
-//  #endif /* __GNUC__*/
-// PUTCHAR_PROTOTYPE
-// {
-		
-//     HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
-// //	vTaskSuspendAll();	xTaskResumeAll();
-//     return ch;
-// }
-
-
-//禁用ARM半主机模式（核心！否则printf不生效）
-#pragma import(__use_no_semihosting)
-void _sys_exit(int x) { x = x; }
-struct __FILE {
-   int handle;
-   // 不需要额外成员，�??小定义即可补全struct __FILE定义，让FILE变成完整类型
-};
-
-FILE __stdout; // 现在可以正常定义�??
-
-int fputc(int ch, FILE *f)
-{ 
- HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF); // 注意这个超时时间
- return ch;
-}
-
-#endif /* __GNUC__ */
-
+/*
+ * USART2是MCU与PC之间的专用通信端口。不要在该端口重定向printf/scanf，
+ * 否则调试文本或阻塞式收发会破坏上层通信帧以及正在运行的DMA传输。
+ */
 
 /* USER CODE END 0 */
 
@@ -143,8 +96,8 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     hdma_usart2_rx.Init.MemInc = DMA_MINC_ENABLE;
     hdma_usart2_rx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
     hdma_usart2_rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
-    hdma_usart2_rx.Init.Mode = DMA_NORMAL;
-    hdma_usart2_rx.Init.Priority = DMA_PRIORITY_LOW;
+    hdma_usart2_rx.Init.Mode = DMA_CIRCULAR;
+    hdma_usart2_rx.Init.Priority = DMA_PRIORITY_HIGH;
     if (HAL_DMA_Init(&hdma_usart2_rx) != HAL_OK)
     {
       Error_Handler();
@@ -160,13 +113,17 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     hdma_usart2_tx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
     hdma_usart2_tx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
     hdma_usart2_tx.Init.Mode = DMA_NORMAL;
-    hdma_usart2_tx.Init.Priority = DMA_PRIORITY_LOW;
+    hdma_usart2_tx.Init.Priority = DMA_PRIORITY_HIGH;
     if (HAL_DMA_Init(&hdma_usart2_tx) != HAL_OK)
     {
       Error_Handler();
     }
 
     __HAL_LINKDMA(uartHandle,hdmatx,hdma_usart2_tx);
+
+    /* USART2 interrupt Init */
+    HAL_NVIC_SetPriority(USART2_IRQn, 3, 0);
+    HAL_NVIC_EnableIRQ(USART2_IRQn);
 
   /* USER CODE BEGIN USART2_MspInit 1 */
 
@@ -194,6 +151,9 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
     /* USART2 DMA DeInit */
     HAL_DMA_DeInit(uartHandle->hdmarx);
     HAL_DMA_DeInit(uartHandle->hdmatx);
+
+    /* USART2 interrupt Deinit */
+    HAL_NVIC_DisableIRQ(USART2_IRQn);
   /* USER CODE BEGIN USART2_MspDeInit 1 */
 
   /* USER CODE END USART2_MspDeInit 1 */

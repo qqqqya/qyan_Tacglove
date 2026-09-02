@@ -223,7 +223,7 @@ CMAKE_STRIP:FILEPATH=D:/Soft/MinGW/arm-gnu-toolchain-15.2/bin/arm-none-eabi-stri
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 
-//The CMake toolchain file
+//No help, variable specified on the command line.
 CMAKE_TOOLCHAIN_FILE:FILEPATH=D:/M0/five_data/qyan_Tacglove/cmake/gcc-arm-none-eabi.cmake
 
 //If this value is on, makefiles will be generated without the
@@ -240,6 +240,9 @@ M0_Init_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 M0_Init_SOURCE_DIR:STATIC=D:/M0/five_data/qyan_Tacglove
+
+//Path to a program.
+OPENOCD_EXECUTABLE:FILEPATH=D:/Soft/OpenOCD/xpack-openocd-0.12.0-7/bin/openocd.exe
 
 
 ########################

@@ -21,6 +21,13 @@ endif()
 # Set the project name
 set(CMAKE_PROJECT_NAME M0_Init)
 
+#
+# Firmware artifact/version tag: this is the single source of truth used by
+# both the MCU HELLO firmware tag and the generated ELF/HEX/BIN file names.
+# Increment this tag only when a new firmware revision is intentionally issued.
+#
+set(FIRMWARE_BUILD_TAG "STAGE3_R1")
+
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
@@ -52,9 +59,13 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     BSP/BEEP/bsp_beep_driver.c
     BSP/BEEP/bsp_beep_handler.c
     BSP/KEY/bsp_key_handler.c
+    BSP/UART/bsp_uart_driver.c
+    Middlewares/Protocol/mcu_protocol.c
+    User_tasks/communication_task.c
     User_tasks/led_task.c
     User_tasks/key_task.c
     User_tasks/system_event.c
+    User_tasks/system_status.c
     User_tasks/task_manager.c
     Middlewares/FreeRTOS/os_hooks.c
 
@@ -71,6 +82,8 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     BSP/LED
     BSP/BEEP
     BSP/KEY
+    BSP/UART
+    Middlewares/Protocol
     User_tasks
     Middlewares/FreeRTOS
     ${FREERTOS_KERNEL_DIR}/include
@@ -79,7 +92,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined symbols
+    FIRMWARE_BUILD_TAG="${FIRMWARE_BUILD_TAG}"
 )
 
 # Remove wrong libob.a library dependency when using cpp files
@@ -91,3 +104,46 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 
     # Add user defined libraries
 )
+
+# Generate reproducible, versioned programming artifacts after every build.
+set(FIRMWARE_ARTIFACT_BASENAME
+    "${CMAKE_PROJECT_NAME}_${FIRMWARE_BUILD_TAG}"
+)
+
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "$<TARGET_FILE:${CMAKE_PROJECT_NAME}>"
+            "${CMAKE_CURRENT_BINARY_DIR}/${FIRMWARE_ARTIFACT_BASENAME}.elf"
+    COMMAND ${CMAKE_OBJCOPY} -O ihex
+            "$<TARGET_FILE:${CMAKE_PROJECT_NAME}>"
+            "${CMAKE_CURRENT_BINARY_DIR}/${FIRMWARE_ARTIFACT_BASENAME}.hex"
+    COMMAND ${CMAKE_OBJCOPY} -O binary
+            "$<TARGET_FILE:${CMAKE_PROJECT_NAME}>"
+            "${CMAKE_CURRENT_BINARY_DIR}/${FIRMWARE_ARTIFACT_BASENAME}.bin"
+    COMMENT "Generating ${FIRMWARE_ARTIFACT_BASENAME}.elf/.hex/.bin"
+    VERBATIM
+)
+
+#
+# Provide a safe one-command programming target only for Release builds.
+# This prevents accidentally flashing build/cmake/Debug/M0_Init.elf when the
+# board is expected to run the timing- and memory-validated Release firmware.
+#
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    find_program(OPENOCD_EXECUTABLE openocd)
+    if(OPENOCD_EXECUTABLE)
+        add_custom_target(flash
+            COMMAND ${OPENOCD_EXECUTABLE}
+                    -f "${CMAKE_SOURCE_DIR}/openocd.cfg"
+                    -c "gdb port disabled"
+                    -c "init; reset init"
+                    -c "program $<TARGET_FILE:${CMAKE_PROJECT_NAME}> verify reset exit"
+            DEPENDS ${CMAKE_PROJECT_NAME}
+            COMMENT "Flashing validated Release firmware: $<TARGET_FILE:${CMAKE_PROJECT_NAME}>"
+            USES_TERMINAL
+            VERBATIM
+        )
+    else()
+        message(WARNING "OpenOCD not found: Release 'flash' target is unavailable")
+    endif()
+endif()

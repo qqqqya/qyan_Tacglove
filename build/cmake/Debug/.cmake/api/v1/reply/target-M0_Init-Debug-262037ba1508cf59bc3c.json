@@ -12,6 +12,7 @@
 		[
 			"add_executable",
 			"target_link_libraries",
+			"target_compile_definitions",
 			"target_include_directories",
 			"target_sources"
 		],
@@ -28,7 +29,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 35,
+				"line" : 42,
 				"parent" : 0
 			},
 			{
@@ -41,47 +42,31 @@
 				"parent" : 2
 			},
 			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 89,
-				"parent" : 0
-			},
-			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 70,
+				"line" : 94,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
+				"file" : 0,
+				"line" : 81,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
 				"file" : 1,
 				"line" : 82,
 				"parent" : 2
 			},
 			{
-				"command" : 3,
+				"command" : 4,
 				"file" : 0,
-				"line" : 49,
+				"line" : 56,
 				"parent" : 0
 			}
 		]
 	},
-	"codemodelVersion" : 
-	{
-		"major" : 2,
-		"minor" : 10
-	},
-	"compileDependencies" : 
-	[
-		{
-			"backtrace" : 3,
-			"id" : "STM32_Drivers::@768a070a0fe75716b479"
-		},
-		{
-			"backtrace" : 4,
-			"id" : "stm32cubemx::@768a070a0fe75716b479"
-		}
-	],
 	"compileGroups" : 
 	[
 		{
@@ -96,6 +81,10 @@
 				{
 					"backtrace" : 3,
 					"define" : "DEBUG"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "FIRMWARE_BUILD_TAG=\"STAGE3_R1\""
 				},
 				{
 					"backtrace" : 3,
@@ -119,6 +108,14 @@
 				{
 					"backtrace" : 5,
 					"path" : "D:/M0/five_data/qyan_Tacglove/BSP/KEY"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/BSP/UART"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/Middlewares/Protocol"
 				},
 				{
 					"backtrace" : 5,
@@ -192,7 +189,11 @@
 				22,
 				23,
 				24,
-				25
+				25,
+				26,
+				27,
+				28,
+				29
 			]
 		},
 		{
@@ -207,6 +208,10 @@
 				{
 					"backtrace" : 3,
 					"define" : "DEBUG"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "FIRMWARE_BUILD_TAG=\"STAGE3_R1\""
 				},
 				{
 					"backtrace" : 3,
@@ -230,6 +235,14 @@
 				{
 					"backtrace" : 5,
 					"path" : "D:/M0/five_data/qyan_Tacglove/BSP/KEY"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/BSP/UART"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/M0/five_data/qyan_Tacglove/Middlewares/Protocol"
 				},
 				{
 					"backtrace" : 5,
@@ -303,21 +316,6 @@
 		],
 		"language" : "C"
 	},
-	"linkLibraries" : 
-	[
-		{
-			"backtrace" : 3,
-			"id" : "STM32_Drivers::@768a070a0fe75716b479"
-		},
-		{
-			"backtrace" : 3,
-			"fragment" : "m"
-		},
-		{
-			"backtrace" : 4,
-			"id" : "stm32cubemx::@768a070a0fe75716b479"
-		}
-	],
 	"name" : "M0_Init",
 	"nameOnDisk" : "M0_Init.elf",
 	"paths" : 
@@ -355,7 +353,11 @@
 				22,
 				23,
 				24,
-				25
+				25,
+				26,
+				27,
+				28,
+				29
 			]
 		},
 		{
@@ -369,10 +371,6 @@
 			"name" : "Object Libraries",
 			"sourceIndexes" : 
 			[
-				26,
-				27,
-				28,
-				29,
 				30,
 				31,
 				32,
@@ -386,7 +384,11 @@
 				40,
 				41,
 				42,
-				43
+				43,
+				44,
+				45,
+				46,
+				47
 			]
 		}
 	],
@@ -485,6 +487,24 @@
 		{
 			"backtrace" : 7,
 			"compileGroupIndex" : 0,
+			"path" : "BSP/UART/bsp_uart_driver.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "Middlewares/Protocol/mcu_protocol.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "User_tasks/communication_task.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
 			"path" : "User_tasks/led_task.c",
 			"sourceGroupIndex" : 0
 		},
@@ -498,6 +518,12 @@
 			"backtrace" : 7,
 			"compileGroupIndex" : 0,
 			"path" : "User_tasks/system_event.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 7,
+			"compileGroupIndex" : 0,
+			"path" : "User_tasks/system_status.c",
 			"sourceGroupIndex" : 0
 		},
 		{

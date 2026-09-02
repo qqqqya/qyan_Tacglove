@@ -1,0 +1,13 @@
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:73:13:communication_put_u16	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:80:13:communication_put_u32	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:89:17:communication_get_u32	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:101:13:communication_transmit	24	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:139:13:communication_send_frame	64	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:161:13:communication_send_command_error	24	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:172:13:communication_handle_hello	48	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:195:13:communication_handle_status	72	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:230:13:communication_handle_command	56	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:315:13:communication_publish_button_event	40	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:353:13:communication_process_frame	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:386:13:communication_task_entry	72	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c:447:15:communication_task_create	24	static

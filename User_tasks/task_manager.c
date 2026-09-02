@@ -4,6 +4,7 @@
  */
 #include "task_manager.h"
 
+#include "communication_task.h"
 #include "key_task.h"
 #include "led_task.h"
 #include "system_event.h"
@@ -29,6 +30,13 @@ task_status_t task_manager_init(void)
     if (TASK_OK != result)
     {
         /* 日志预留：记录按键扫描任务注册失败及result。 */
+        return result;
+    }
+
+    result = communication_task_create();
+    if (TASK_OK != result)
+    {
+        /* 阶段3二进制业务通信任务创建失败，通常表示FreeRTOS heap不足。 */
         return result;
     }
 

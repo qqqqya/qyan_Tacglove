@@ -16,6 +16,7 @@
 #include "bsp_led_handler.h"
 #include "bsp_beep_handler.h"
 #include "system_event.h"
+#include "system_status.h"
 
 #define LED_TASK_STACK_WORDS      128U                    /**< 128 words，即512 bytes。 */
 #define LED_TASK_PRIORITY         (tskIDLE_PRIORITY + 1U) /**< 板级显示任务优先级。 */
@@ -405,6 +406,8 @@ static void led_show_fault_state(void)
 static void led_task_entry(void *argument)
 {
     (void)argument;
+    system_status_set(SYSTEM_STATE_SELF_TEST, SYSTEM_FAULT_NONE);
+
     const bsp_led_color_t off = {.red = 0U, .green = 0U, .blue = 0U};
     const bsp_led_color_t green = {
         .red = 0U, .green = LED_STATUS_BRIGHTNESS, .blue = 0U};
@@ -420,6 +423,8 @@ static void led_task_entry(void *argument)
     /** @brief 初始化失败，进入故障状态 */
     if ((HANDLER_OK != led_status) || (HANDLER_BEEP_OK != beep_status))
     {
+        system_status_set(SYSTEM_STATE_FAULT,
+                          SYSTEM_FAULT_LED_OR_BEEP_INIT);
         led_show_fault_state();
         for (;;)/* 无限循环，等待系统重启 */
         {
@@ -430,6 +435,7 @@ static void led_task_entry(void *argument)
     led_status = led_run_power_on_self_test();
     if (HANDLER_OK != led_status)
     {
+        system_status_set(SYSTEM_STATE_FAULT, SYSTEM_FAULT_SELF_TEST);
         led_show_fault_state();
         for (;;)
         {
@@ -440,6 +446,10 @@ static void led_task_entry(void *argument)
     /* 自检期间按下的按键无效，进入待机后必须重新按下一次。 */
     system_event_clear();
     led_status = led_show_system_state(green, off);
+    if (HANDLER_OK == led_status)
+    {
+        system_status_set(SYSTEM_STATE_IDLE, SYSTEM_FAULT_NONE);
+    }
 
     for (;;)
     {
@@ -447,6 +457,8 @@ static void led_task_entry(void *argument)
 
         if (HANDLER_OK != led_status)
         {
+            system_status_set(SYSTEM_STATE_FAULT,
+                              SYSTEM_FAULT_CAPTURE_FLOW);
             led_show_fault_state();
             led_delay(LED_ERROR_RETRY_DELAY_MS);
             continue;
@@ -454,10 +466,9 @@ static void led_task_entry(void *argument)
 
         const task_status_t event_status =
             system_event_wait(&event, portMAX_DELAY);
-        if ((TASK_OK != event_status) ||
-            (SYSTEM_EVENT_CAPTURE_KEY_PRESSED != event.type))
+        if (TASK_OK != event_status)
         {
-            /* 当前没有其他事件；队列资源错误时按系统故障处理。 */
+            /* portMAX_DELAY不应超时；队列资源错误按系统故障处理。 */
             if (TASK_ERROR_TIMEOUT != event_status)
             {
                 led_status = HANDLER_ERROR;
@@ -465,31 +476,72 @@ static void led_task_entry(void *argument)
             continue;
         }
 
-        if (!capture_active)
+        if (SYSTEM_EVENT_BEEP_SHORT_REQUEST == event.type)
         {
+            if (!led_beep_once())
+            {
+                system_status_set(SYSTEM_STATE_FAULT,
+                                  SYSTEM_FAULT_CAPTURE_FLOW);
+                led_status = HANDLER_ERROR;
+            }
+            continue;
+        }
+
+        if (SYSTEM_EVENT_CAPTURE_START_REQUEST == event.type)
+        {
+            if (capture_active)
+            {
+                /* 幂等保护：已经采集时重复START不改变状态。 */
+                continue;
+            }
+
             /* 蓝灯闪烁表示准备中；蜂鸣结束后才允许数据采集开始。 */
+            system_status_set(SYSTEM_STATE_CAPTURE_PREPARING,
+                              SYSTEM_FAULT_NONE);
             led_status = led_run_capture_prepare();
             if ((HANDLER_OK != led_status) || !led_beep_once() ||
                 !led_data_capture_start())
             {
+                system_status_set(SYSTEM_STATE_FAULT,
+                                  SYSTEM_FAULT_CAPTURE_FLOW);
                 led_status = HANDLER_ERROR;
                 continue;
             }
 
             led_status = led_show_system_state(green, blue);
             capture_active = (HANDLER_OK == led_status);
+            system_status_set(capture_active ? SYSTEM_STATE_CAPTURING
+                                             : SYSTEM_STATE_FAULT,
+                              capture_active ? SYSTEM_FAULT_NONE
+                                             : SYSTEM_FAULT_CAPTURE_FLOW);
         }
-        else
+        else if (SYSTEM_EVENT_CAPTURE_STOP_REQUEST == event.type)
         {
+            if (!capture_active)
+            {
+                /* 幂等保护：待机时重复STOP不改变状态。 */
+                continue;
+            }
+
             /* 先安全结束和落盘，再鸣叫确认，最后回到绿色待机状态。 */
             if (!led_data_capture_stop() || !led_beep_once())
             {
+                system_status_set(SYSTEM_STATE_FAULT,
+                                  SYSTEM_FAULT_CAPTURE_FLOW);
                 led_status = HANDLER_ERROR;
                 continue;
             }
 
             capture_active = false;
             led_status = led_show_system_state(green, off);
+            system_status_set((HANDLER_OK == led_status) ? SYSTEM_STATE_IDLE
+                                                        : SYSTEM_STATE_FAULT,
+                              (HANDLER_OK == led_status) ? SYSTEM_FAULT_NONE
+                                                        : SYSTEM_FAULT_CAPTURE_FLOW);
+        }
+        else
+        {
+            /* 未知事件由其生产者处理，不改变显示或采集状态。 */
         }
     }
 }

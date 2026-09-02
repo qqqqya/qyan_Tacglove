@@ -1,6 +1,8 @@
-D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:74:6:NMI_Handler	0	static
-D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:89:6:HardFault_Handler	0	static
-D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:104:6:CubeMX_SVC_Handler	0	static
-D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:117:6:CubeMX_PendSV_Handler	0	static
-D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:130:6:CubeMX_SysTick_Handler	0	static
-D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:151:6:TIM1_BRK_UP_TRG_COM_IRQHandler	8	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:77:6:NMI_Handler	0	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:92:6:HardFault_Handler	0	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:107:6:CubeMX_SVC_Handler	0	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:120:6:CubeMX_PendSV_Handler	0	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:133:6:CubeMX_SysTick_Handler	0	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:154:6:DMA1_Channel4_5_IRQHandler	8	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:169:6:TIM1_BRK_UP_TRG_COM_IRQHandler	8	static
+D:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c:183:6:USART2_IRQHandler	8	static

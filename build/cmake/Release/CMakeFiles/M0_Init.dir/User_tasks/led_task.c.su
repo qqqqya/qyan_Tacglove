@@ -1,5 +1,5 @@
-D:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c:310:13:led_beep_once	8	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c:224:29:led_show_system_state	16	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c:393:13:led_show_fault_state	16	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c:405:13:led_task_entry	64	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c:494:15:led_task_create	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c:311:13:led_beep_once	8	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c:225:29:led_show_system_state.constprop	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c:394:13:led_show_fault_state	16	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c:406:13:led_task_entry	64	static
+D:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c:549:15:led_task_create	16	static

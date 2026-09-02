@@ -51,290 +51,302 @@ build cmake_object_order_depends_target_M0_Init: phony || cmake_object_order_dep
 
 build CMakeFiles/M0_Init.dir/Core/Src/main.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Core/Src/main.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\Core\Src\main.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/Core/Src/gpio.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Core/Src/gpio.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\Core\Src\gpio.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
+
+build CMakeFiles/M0_Init.dir/Core/Src/dma.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Core/Src/dma.c || cmake_object_order_depends_target_M0_Init
+  CONFIG = Release
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\M0_Init.dir\Core\Src\dma.c.obj.d
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\M0_Init.dir
+  OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Core\Src
+  TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
+
+build CMakeFiles/M0_Init.dir/Core/Src/usart.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Core/Src/usart.c || cmake_object_order_depends_target_M0_Init
+  CONFIG = Release
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\M0_Init.dir\Core\Src\usart.c.obj.d
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\M0_Init.dir
+  OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Core\Src
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/Core/Src/stm32f0xx_it.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_it.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\Core\Src\stm32f0xx_it.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/Core/Src/stm32f0xx_hal_msp.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_hal_msp.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\Core\Src\stm32f0xx_hal_msp.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/Core/Src/stm32f0xx_hal_timebase_tim.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Core/Src/stm32f0xx_hal_timebase_tim.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\Core\Src\stm32f0xx_hal_timebase_tim.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/Core/Src/sysmem.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Core/Src/sysmem.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\Core\Src\sysmem.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/Core/Src/syscalls.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Core/Src/syscalls.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\Core\Src\syscalls.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Core\Src
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/startup_stm32f042x6.s.obj: ASM_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/startup_stm32f042x6.s || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\startup_stm32f042x6.s.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -x assembler-with-cpp -MMD -MP -O3 -DNDEBUG
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -x assembler-with-cpp -MMD -MP -O3 -DNDEBUG
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/BSP/LED/bsp_led_driver.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/BSP/LED/bsp_led_driver.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\BSP\LED\bsp_led_driver.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\BSP\LED
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/BSP/LED/bsp_led_handler.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/BSP/LED/bsp_led_handler.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\BSP\LED\bsp_led_handler.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\BSP\LED
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/BSP/BEEP/bsp_beep_driver.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/BSP/BEEP/bsp_beep_driver.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\BSP\BEEP\bsp_beep_driver.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\BSP\BEEP
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/BSP/BEEP/bsp_beep_handler.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/BSP/BEEP/bsp_beep_handler.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\BSP\BEEP\bsp_beep_handler.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\BSP\BEEP
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/BSP/KEY/bsp_key_handler.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/BSP/KEY/bsp_key_handler.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\BSP\KEY\bsp_key_handler.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\BSP\KEY
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
+
+build CMakeFiles/M0_Init.dir/BSP/UART/bsp_uart_driver.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/BSP/UART/bsp_uart_driver.c || cmake_object_order_depends_target_M0_Init
+  CONFIG = Release
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\M0_Init.dir\BSP\UART\bsp_uart_driver.c.obj.d
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\M0_Init.dir
+  OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\BSP\UART
+  TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
+
+build CMakeFiles/M0_Init.dir/Middlewares/Protocol/mcu_protocol.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Middlewares/Protocol/mcu_protocol.c || cmake_object_order_depends_target_M0_Init
+  CONFIG = Release
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\M0_Init.dir\Middlewares\Protocol\mcu_protocol.c.obj.d
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\M0_Init.dir
+  OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Middlewares\Protocol
+  TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
+
+build CMakeFiles/M0_Init.dir/User_tasks/communication_task.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/User_tasks/communication_task.c || cmake_object_order_depends_target_M0_Init
+  CONFIG = Release
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\M0_Init.dir\User_tasks\communication_task.c.obj.d
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\M0_Init.dir
+  OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\User_tasks
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/User_tasks/led_task.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/User_tasks/led_task.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\User_tasks\led_task.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\User_tasks
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/User_tasks/key_task.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/User_tasks/key_task.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\User_tasks\key_task.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\User_tasks
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/User_tasks/system_event.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/User_tasks/system_event.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\User_tasks\system_event.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\User_tasks
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
+
+build CMakeFiles/M0_Init.dir/User_tasks/system_status.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/User_tasks/system_status.c || cmake_object_order_depends_target_M0_Init
+  CONFIG = Release
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\M0_Init.dir\User_tasks\system_status.c.obj.d
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\M0_Init.dir
+  OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\User_tasks
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/User_tasks/task_manager.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/User_tasks/task_manager.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\User_tasks\task_manager.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\User_tasks
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/Middlewares/FreeRTOS/os_hooks.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS/os_hooks.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\Middlewares\FreeRTOS\os_hooks.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\Middlewares\FreeRTOS
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/list.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/FreeRTOS/list.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS\list.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/queue.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/FreeRTOS/queue.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS\queue.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/tasks.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/FreeRTOS/tasks.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS\tasks.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/portable/MemMang/heap_4.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/FreeRTOS/portable/MemMang/heap_4.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS\portable\MemMang\heap_4.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS\portable\MemMang
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/port.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/port.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS\portable\GCC\ARM_CM0\port.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS\portable\GCC\ARM_CM0
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 build CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/portasm.c.obj: C_COMPILER__M0_Init_unscanned_Release D$:/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/portasm.c || cmake_object_order_depends_target_M0_Init
   CONFIG = Release
-  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEFINES = -DFIRMWARE_BUILD_TAG=\"STAGE3_R1\" -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS\portable\GCC\ARM_CM0\portasm.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
-  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/BSP/LED -ID:/M0/five_data/qyan_Tacglove/BSP/BEEP -ID:/M0/five_data/qyan_Tacglove/BSP/KEY -ID:/M0/five_data/qyan_Tacglove/BSP/UART -ID:/M0/five_data/qyan_Tacglove/Middlewares/Protocol -ID:/M0/five_data/qyan_Tacglove/User_tasks -ID:/M0/five_data/qyan_Tacglove/Middlewares/FreeRTOS -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/include -ID:/M0/five_data/qyan_Tacglove/../FreeRTOS/portable/GCC/ARM_CM0 -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\M0_Init.dir
   OBJECT_FILE_DIR = CMakeFiles\M0_Init.dir\D_\M0\five_data\FreeRTOS\portable\GCC\ARM_CM0
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
-  TARGET_PDB = M0_Init.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
 
 
@@ -345,18 +357,23 @@ build CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/porta
 #############################################
 # Link the executable M0_Init.elf
 
-build M0_Init.elf: C_EXECUTABLE_LINKER__M0_Init_Release cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f0xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj CMakeFiles/M0_Init.dir/Core/Src/main.c.obj CMakeFiles/M0_Init.dir/Core/Src/gpio.c.obj CMakeFiles/M0_Init.dir/Core/Src/stm32f0xx_it.c.obj CMakeFiles/M0_Init.dir/Core/Src/stm32f0xx_hal_msp.c.obj CMakeFiles/M0_Init.dir/Core/Src/stm32f0xx_hal_timebase_tim.c.obj CMakeFiles/M0_Init.dir/Core/Src/sysmem.c.obj CMakeFiles/M0_Init.dir/Core/Src/syscalls.c.obj CMakeFiles/M0_Init.dir/startup_stm32f042x6.s.obj CMakeFiles/M0_Init.dir/BSP/LED/bsp_led_driver.c.obj CMakeFiles/M0_Init.dir/BSP/LED/bsp_led_handler.c.obj CMakeFiles/M0_Init.dir/BSP/BEEP/bsp_beep_driver.c.obj CMakeFiles/M0_Init.dir/BSP/BEEP/bsp_beep_handler.c.obj CMakeFiles/M0_Init.dir/BSP/KEY/bsp_key_handler.c.obj CMakeFiles/M0_Init.dir/User_tasks/led_task.c.obj CMakeFiles/M0_Init.dir/User_tasks/key_task.c.obj CMakeFiles/M0_Init.dir/User_tasks/system_event.c.obj CMakeFiles/M0_Init.dir/User_tasks/task_manager.c.obj CMakeFiles/M0_Init.dir/Middlewares/FreeRTOS/os_hooks.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/list.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/queue.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/tasks.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/portable/MemMang/heap_4.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/port.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/portasm.c.obj || cmake/stm32cubemx/STM32_Drivers
+build M0_Init.elf: C_EXECUTABLE_LINKER__M0_Init_Release cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f0xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj CMakeFiles/M0_Init.dir/Core/Src/main.c.obj CMakeFiles/M0_Init.dir/Core/Src/gpio.c.obj CMakeFiles/M0_Init.dir/Core/Src/dma.c.obj CMakeFiles/M0_Init.dir/Core/Src/usart.c.obj CMakeFiles/M0_Init.dir/Core/Src/stm32f0xx_it.c.obj CMakeFiles/M0_Init.dir/Core/Src/stm32f0xx_hal_msp.c.obj CMakeFiles/M0_Init.dir/Core/Src/stm32f0xx_hal_timebase_tim.c.obj CMakeFiles/M0_Init.dir/Core/Src/sysmem.c.obj CMakeFiles/M0_Init.dir/Core/Src/syscalls.c.obj CMakeFiles/M0_Init.dir/startup_stm32f042x6.s.obj CMakeFiles/M0_Init.dir/BSP/LED/bsp_led_driver.c.obj CMakeFiles/M0_Init.dir/BSP/LED/bsp_led_handler.c.obj CMakeFiles/M0_Init.dir/BSP/BEEP/bsp_beep_driver.c.obj CMakeFiles/M0_Init.dir/BSP/BEEP/bsp_beep_handler.c.obj CMakeFiles/M0_Init.dir/BSP/KEY/bsp_key_handler.c.obj CMakeFiles/M0_Init.dir/BSP/UART/bsp_uart_driver.c.obj CMakeFiles/M0_Init.dir/Middlewares/Protocol/mcu_protocol.c.obj CMakeFiles/M0_Init.dir/User_tasks/communication_task.c.obj CMakeFiles/M0_Init.dir/User_tasks/led_task.c.obj CMakeFiles/M0_Init.dir/User_tasks/key_task.c.obj CMakeFiles/M0_Init.dir/User_tasks/system_event.c.obj CMakeFiles/M0_Init.dir/User_tasks/system_status.c.obj CMakeFiles/M0_Init.dir/User_tasks/task_manager.c.obj CMakeFiles/M0_Init.dir/Middlewares/FreeRTOS/os_hooks.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/list.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/queue.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/tasks.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/portable/MemMang/heap_4.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/port.c.obj CMakeFiles/M0_Init.dir/D_/M0/five_data/FreeRTOS/portable/GCC/ARM_CM0/portasm.c.obj || cmake/stm32cubemx/STM32_Drivers
   CONFIG = Release
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0
   LINK_FLAGS = -mcpu=cortex-m0  -T "D:/M0/five_data/qyan_Tacglove/STM32F042XX_FLASH.ld" --specs=nano.specs -Wl,-Map=M0_Init.map -Wl,--gc-sections -Wl,--print-memory-usage
   LINK_LIBRARIES = -lm
   OBJECT_DIR = CMakeFiles\M0_Init.dir
-  POST_BUILD = cd .
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\M0\five_data\qyan_Tacglove\build\cmake\Release && "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/M0/five_data/qyan_Tacglove/build/cmake/Release/M0_Init.elf D:/M0/five_data/qyan_Tacglove/build/cmake/Release/M0_Init_STAGE3_R1.elf && arm-none-eabi-objcopy -O ihex D:/M0/five_data/qyan_Tacglove/build/cmake/Release/M0_Init.elf D:/M0/five_data/qyan_Tacglove/build/cmake/Release/M0_Init_STAGE3_R1.hex && arm-none-eabi-objcopy -O binary D:/M0/five_data/qyan_Tacglove/build/cmake/Release/M0_Init.elf D:/M0/five_data/qyan_Tacglove/build/cmake/Release/M0_Init_STAGE3_R1.bin"
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\M0_Init.dir\
   TARGET_FILE = M0_Init.elf
-  TARGET_PDB = M0_Init.pdb
+  TARGET_PDB = M0_Init.elf.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\M0_Init.dir
+
+
+#############################################
+# Utility command for flash
+
+build flash: phony CMakeFiles/flash M0_Init.elf
 
 
 #############################################
@@ -382,6 +399,15 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Custom command for CMakeFiles\flash
+
+build CMakeFiles/flash | ${cmake_ninja_workdir}CMakeFiles/flash: CUSTOM_COMMAND M0_Init.elf || M0_Init.elf cmake/stm32cubemx/STM32_Drivers
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\M0\five_data\qyan_Tacglove\build\cmake\Release && D:\Soft\OpenOCD\xpack-openocd-0.12.0-7\bin\openocd.exe -f D:/M0/five_data/qyan_Tacglove/openocd.cfg -c "gdb port disabled" -c "init; reset init" -c "program D:/M0/five_data/qyan_Tacglove/build/cmake/Release/M0_Init.elf verify reset exit""
+  DESC = Flashing validated Release firmware: D:/M0/five_data/qyan_Tacglove/build/cmake/Release/M0_Init.elf
+  pool = console
+
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # D:/M0/five_data/qyan_Tacglove/CMakeLists.txt
@@ -400,192 +426,180 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Core\Src\system_stm32f0xx.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Core\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_tim.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_tim_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
+  TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Release
+  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_uart.c.obj.d
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
+  TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Release
+  DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_uart_ex.c.obj.d
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_i2c.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_i2c_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_dma.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_cortex.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_pwr.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_pwr_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_flash.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_flash_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj: C_COMPILER__STM32_Drivers_unscanned_Release D$:/M0/five_data/qyan_Tacglove/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Release
   DEFINES = -DSTM32F042x6 -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_exti.c.obj.d
-  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
+  FLAGS = -mcpu=cortex-m0  -Wall -fdata-sections -ffunction-sections -fstack-usage -Os -g0 -std=gnu11
   INCLUDES = -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Core/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F0xx/Include -ID:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32F0xx_HAL_Driver\Src
-  TARGET_COMPILE_PDB = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\
-  TARGET_PDB = ""
   TARGET_SUPPORT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
 
 
@@ -593,7 +607,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL
 #############################################
 # Object library STM32_Drivers
 
-build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f0xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj
+build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f0xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj
 
 
 #############################################
@@ -650,14 +664,14 @@ build cmake/stm32cubemx/all: phony cmake/stm32cubemx/STM32_Drivers
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja D$:/M0/five_data/qyan_Tacglove/build/cmake/Release/cmake_install.cmake D$:/M0/five_data/qyan_Tacglove/build/cmake/Release/cmake/stm32cubemx/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX-CXXImportStd.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectASMLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectCLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectCXXLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/4.3.2/CMakeASMCompiler.cmake CMakeFiles/4.3.2/CMakeCCompiler.cmake CMakeFiles/4.3.2/CMakeCXXCompiler.cmake CMakeFiles/4.3.2/CMakeSystem.cmake D$:/M0/five_data/qyan_Tacglove/CMakeLists.txt D$:/M0/five_data/qyan_Tacglove/cmake/gcc-arm-none-eabi.cmake D$:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/CMakeLists.txt
+build build.ninja D$:/M0/five_data/qyan_Tacglove/build/cmake/Release/cmake_install.cmake D$:/M0/five_data/qyan_Tacglove/build/cmake/Release/cmake/stm32cubemx/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/4.3.2/CMakeASMCompiler.cmake CMakeFiles/4.3.2/CMakeCCompiler.cmake CMakeFiles/4.3.2/CMakeCXXCompiler.cmake CMakeFiles/4.3.2/CMakeSystem.cmake D$:/M0/five_data/qyan_Tacglove/CMakeLists.txt D$:/M0/five_data/qyan_Tacglove/cmake/gcc-arm-none-eabi.cmake D$:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCCompilerABI.c C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX-CXXImportStd.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectASMLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectCLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeInspectCXXLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/4.3.2/CMakeASMCompiler.cmake CMakeFiles/4.3.2/CMakeCCompiler.cmake CMakeFiles/4.3.2/CMakeCXXCompiler.cmake CMakeFiles/4.3.2/CMakeSystem.cmake D$:/M0/five_data/qyan_Tacglove/CMakeLists.txt D$:/M0/five_data/qyan_Tacglove/cmake/gcc-arm-none-eabi.cmake D$:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/CMakeLists.txt: phony
+build C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.3/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/4.3.2/CMakeASMCompiler.cmake CMakeFiles/4.3.2/CMakeCCompiler.cmake CMakeFiles/4.3.2/CMakeCXXCompiler.cmake CMakeFiles/4.3.2/CMakeSystem.cmake D$:/M0/five_data/qyan_Tacglove/CMakeLists.txt D$:/M0/five_data/qyan_Tacglove/cmake/gcc-arm-none-eabi.cmake D$:/M0/five_data/qyan_Tacglove/cmake/stm32cubemx/CMakeLists.txt: phony
 
 
 #############################################

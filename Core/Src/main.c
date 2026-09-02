@@ -27,10 +27,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "task_manager.h"
-
-#include <stdio.h>
 /* USER CODE END Includes */
-
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
@@ -94,10 +91,10 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_DMA_Init();
-  MX_USART2_UART_Init();
+  MX_USART2_UART_Init(); 
   /* USER CODE BEGIN 2 */
 
-  printf("Hello World\r\n");
+  /* USART2由UART BSP通过DMA独占，禁止在此使用printf或阻塞式HAL UART收发。 */
   /*
    * 统一创建所有应用任务。任务创建失败通常表示 FreeRTOS heap 不足，
    * 此时不允许启动一个缺少关键任务的系统。
@@ -148,7 +145,7 @@ void SystemClock_Config(void)
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
-  }
+  } 
 
   /** Initializes the CPU, AHB and APB buses clocks
   */
@@ -165,7 +162,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+ 
 /* USER CODE END 4 */
 
 /**
@@ -174,7 +171,7 @@ void SystemClock_Config(void)
   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
   * a global variable "uwTick" used as application time base.
   * @param  htim : TIM handle
-  * @retval None
+  * @retval None 
   */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
