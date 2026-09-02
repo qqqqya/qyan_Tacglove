@@ -1,7 +1,0 @@
-D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:47:13:uart_test_send	24	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:80:13:uart_test_send_text	24	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:97:13:uart_test_parse_ping	24	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:123:13:uart_test_process_line	24	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:158:13:uart_test_process_byte	16	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:187:13:uart_test_task_entry	40	static
-D:/M0/five_data/qyan_Tacglove/User_tasks/uart_test_task.c:222:15:uart_test_task_create	24	static

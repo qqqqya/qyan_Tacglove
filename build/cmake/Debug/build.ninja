@@ -333,7 +333,7 @@ build M0_Init.elf: C_EXECUTABLE_LINKER__M0_Init_Debug cmake/stm32cubemx/CMakeFil
   LINK_FLAGS = -mcpu=cortex-m0  -T "D:/M0/five_data/qyan_Tacglove/STM32F042XX_FLASH.ld" --specs=nano.specs -Wl,-Map=M0_Init.map -Wl,--gc-sections -Wl,--print-memory-usage
   LINK_LIBRARIES = -lm
   OBJECT_DIR = CMakeFiles\M0_Init.dir
-  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\M0\five_data\qyan_Tacglove\build\cmake\Debug && cube-cmake -E copy_if_different D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init.elf D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init_STAGE3_R1.elf && arm-none-eabi-objcopy -O ihex D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init.elf D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init_STAGE3_R1.hex && arm-none-eabi-objcopy -O binary D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init.elf D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init_STAGE3_R1.bin"
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\M0\five_data\qyan_Tacglove\build\cmake\Debug && C:\Users\Embedded-dev\AppData\Local\stm32cube\bundles\cmake\4.0.1+st.3\bin\cmake.exe -E copy_if_different D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init.elf D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init_STAGE3_R1.elf && arm-none-eabi-objcopy -O ihex D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init.elf D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init_STAGE3_R1.hex && arm-none-eabi-objcopy -O binary D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init.elf D:/M0/five_data/qyan_Tacglove/build/cmake/Debug/M0_Init_STAGE3_R1.bin"
   PRE_LINK = cd .
   TARGET_FILE = M0_Init.elf
   TARGET_PDB = M0_Init.elf.dbg

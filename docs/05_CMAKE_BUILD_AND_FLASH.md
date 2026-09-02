@@ -210,3 +210,38 @@ ls -l /dev/ttyUSB*
 ```
 
 节点出现后再运行测试。阶段1的1000/1000 PASS已经证明RX DMA、TX DMA恢复机制和WSL串口链路能够正常往返；阶段2必须改用二进制协议测试脚本，旧的ASCII脚本超时是预期现象。
+
+## 10. Build一直显示Re-running CMake
+
+如果Output不断出现下面内容，并且计数从 `[0/1]`、`[0/2]` 持续增加：
+
+```text
+Re-running CMake...
+-- Configuring done
+-- Generating done
+```
+
+这不是C源码编译错误，而是Ninja始终认为 `build.ninja` 比某个CMake输入文件旧。先停止当前Build，在PowerShell比较当前时间和顶层文件时间：
+
+```powershell
+Get-Date
+Get-Item D:\M0\five_data\qyan_Tacglove\CMakeLists.txt | Select-Object LastWriteTime
+```
+
+本项目在2026-09-02遇到的问题是Windows时间发生回拨：当前时间约为09:21，但部分工程文件时间处于09:22～14:48。CMake每次新生成的 `build.ninja` 仍早于这些“未来文件”，因此形成无限重配置。
+
+已将工程目录中35个未来时间戳校正到当前时间，未修改这些文件的内容。修复后第一次Debug构建完成全部编译和链接，第二次构建输出：
+
+```text
+ninja: no work to do.
+```
+
+如果以后再次出现，可先打开Windows“自动设置时间”和“自动设置时区”，同步系统时间。确认系统时间正确后，再校正未来文件时间并重新配置；不要在系统时间仍错误时反复删除Build目录，否则新生成的文件仍会继续落后于源码。
+
+VS Code中的提示：
+
+```text
+You are building with preset Debug, but there are some overrides...
+```
+
+来自 `.vscode/settings.json` 的STM32Cube CMake路径/参数覆盖，只是提示，不是本次循环原因。
